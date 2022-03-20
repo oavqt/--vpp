@@ -1,5 +1,38 @@
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
-const StyledNav = styled.nav``;
+//Nav
+const StyledNav = styled.nav`
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+`;
 
 export default StyledNav;
+//
+
+//Nav Elements
+const StyledNavLink = styled(NavLink)`
+  color: #313131;
+  text-decoration: none;
+`;
+
+const StyledNavList = styled.ul`
+  display: flex;
+  flex-direction: column;
+  height: 12vh;
+  justify-content: space-evenly;
+  list-style: none;
+  padding: 0;
+`;
+
+const StyledNavSection = styled.section`
+  height: 100vh;
+  position: absolute;
+  width: 12vw;
+`;
+
+export { StyledNavLink, StyledNavList, StyledNavSection };
+//
