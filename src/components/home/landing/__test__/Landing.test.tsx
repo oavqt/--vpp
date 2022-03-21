@@ -1,5 +1,5 @@
 import { screen } from '@testing-library/react';
-import renderWithRouter from '../../../setup/jest/utility/routes/routes';
+import renderWithRouter from '../../../../setup/jest/utility/routes/routes';
 import Landing from '../Landing';
 
 describe('Landing', () => {
@@ -9,11 +9,11 @@ describe('Landing', () => {
     expect(screen.getByRole('home-landing')).toBeInTheDocument();
   });
 
-  test("expect the Landing component to be rendered with (3) images and the welcome title(l'eh lo'lo'lo'lo)", () => {
+  test('expect the Landing component to be rendered with (3) images and the welcome title(dieu te bénisse)', () => {
     renderWithRouter(<Landing />);
 
     expect(screen.getAllByRole('img')).toHaveLength(3);
 
-    expect(screen.getByText("l'eh lo'lo'lo'lo")).toBeInTheDocument();
+    expect(screen.getByText('dieu te bénisse')).toBeInTheDocument();
   });
 });

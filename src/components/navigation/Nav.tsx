@@ -12,7 +12,7 @@ const Nav: FC = () => {
     <StyledNavSection>
       <StyledNav>
         <StyledNavList>
-          {assets.routes.navigation.map((route) => (
+          {assets.pages.routes.navigation.map((route) => (
             <li key={uuidv4()}>
               <StyledNavLink to={route.path}>{route.desciption}</StyledNavLink>
             </li>

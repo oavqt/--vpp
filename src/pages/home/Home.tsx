@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import Landing from '../../components/landing/Landing';
+import Landing from '../../components/home/landing/Landing';
 import StyledHome from './Home.styled';
 
 const Home: FC = () => {
