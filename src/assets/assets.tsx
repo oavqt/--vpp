@@ -29,7 +29,20 @@ const assets = {
           }
         ]
       },
-      timeline: []
+      timeline: {
+        description: {
+          title: 'dieu te bénisse',
+          body: 'je remercie mon dieu à chaque souvenir de toi, que dieu te bénisse je remercie mon dieu à chaque souvenir de toi, que dieu te bénisse'
+        },
+        images: [
+          {
+            alt: 'about-technology-0',
+            description: 'about-technology-0',
+            id: uuidv4(),
+            src: ''
+          }
+        ]
+      }
     },
     home: {
       landing: {
