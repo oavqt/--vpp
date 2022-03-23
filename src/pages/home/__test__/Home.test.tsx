@@ -9,7 +9,7 @@ describe('Home', () => {
     expect(screen.getByRole('home')).toBeInTheDocument();
   });
 
-  test('expect the Home component to be rendered with a Landing component', () => {
+  test('expect the Home component to be rendered with a HomeLanding component', () => {
     renderWithRouter(<Home />);
 
     expect(screen.getByRole('home-landing')).toBeInTheDocument();
