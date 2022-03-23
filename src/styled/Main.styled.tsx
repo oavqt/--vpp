@@ -6,6 +6,11 @@ const StyledMain = styled.createGlobalStyle`
   body {
     font-family: 'Poppins', sans-serif;
   }
+
+  .app {
+    height: 100vh;
+    width: 100vw;
+  }
 `;
 
 export default StyledMain;

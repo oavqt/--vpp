@@ -5,6 +5,7 @@ const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin'
 
 devConfig = {
   devServer: {
+    historyApiFallback: true /* (/)[name].bundle.js */,
     hot: true,
     open: true
   },

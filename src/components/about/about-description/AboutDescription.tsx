@@ -12,20 +12,24 @@ const AboutDescription: FC = () => {
   return (
     <StyledAboutDescription>
       <StyledAboutDescriptionArticle>
-        <StyledAboutDescriptionImageContainer>
-          {assets.pages.about.images.map((item) => (
-            <div key={uuidv4()}>
-              <img alt={item.alt} src={item.src} />
-            </div>
-          ))}
-        </StyledAboutDescriptionImageContainer>
         <div>
           <StyledAboutDescriptionHeading>
             {assets.pages.about.description.title}
           </StyledAboutDescriptionHeading>
-          <StyledAboutDescriptionParagraph>
-            {assets.pages.about.description.body}
-          </StyledAboutDescriptionParagraph>
+        </div>
+        <div>
+          <StyledAboutDescriptionImageContainer>
+            {assets.pages.about.images.map((item) => (
+              <div key={uuidv4()}>
+                <img alt={item.alt} src={item.src} />
+              </div>
+            ))}
+          </StyledAboutDescriptionImageContainer>
+          <div>
+            <StyledAboutDescriptionParagraph>
+              {assets.pages.about.description.body}
+            </StyledAboutDescriptionParagraph>
+          </div>
         </div>
       </StyledAboutDescriptionArticle>
     </StyledAboutDescription>

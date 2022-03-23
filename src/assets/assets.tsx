@@ -36,8 +36,8 @@ const assets = {
         },
         images: [
           {
-            alt: 'about-technology-0',
-            description: 'about-technology-0',
+            alt: 'about-timeline-0',
+            description: 'about-timeline-0',
             id: uuidv4(),
             src: ''
           }

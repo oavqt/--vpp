@@ -28,7 +28,9 @@ const StyledNavList = styled.ul`
   padding: 0;
 `;
 
-const StyledNavSection = styled.section`
+const StyledNavSection = styled.section.attrs(() => ({
+  role: 'nav'
+}))`
   height: 100vh;
   position: absolute;
   width: 12vw;

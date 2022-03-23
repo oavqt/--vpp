@@ -3,7 +3,9 @@ import styled from 'styled-components';
 //AboutTimeline
 const StyledAboutTimeline = styled.section.attrs(() => ({
   role: 'about-timeline'
-}))``;
+}))`
+  grid-area: timeline;
+`;
 
 export default StyledAboutTimeline;
 //

@@ -3,7 +3,9 @@ import styled from 'styled-components';
 //AboutTechnology
 const StyledAboutTechnology = styled.section.attrs(() => ({
   role: 'about-technology'
-}))``;
+}))`
+  grid-area: technology;
+`;
 
 export default StyledAboutTechnology;
 //
