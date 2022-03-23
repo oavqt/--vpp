@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-//Landing
-const StyledLanding = styled.section.attrs(() => ({
+//HomeLanding
+const StyledHomeLanding = styled.section.attrs(() => ({
   role: 'home-landing'
 }))`
   align-items: center;
@@ -12,13 +12,13 @@ const StyledLanding = styled.section.attrs(() => ({
   width: 100vw;
 `;
 
-export default StyledLanding;
+export default StyledHomeLanding;
 //
 
-//Landing Elements
-const StyledLandingImagesContainer = styled.div`
+//HomeLanding Elements
+const StyledHomeLandingImagesContainer = styled.div`
   display: flex;
 `;
 
-export { StyledLandingImagesContainer };
+export { StyledHomeLandingImagesContainer };
 //

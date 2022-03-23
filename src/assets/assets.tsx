@@ -44,6 +44,23 @@ const assets = {
         ]
       }
     },
+    contact: {
+      landing: {
+        images: [
+          { alt: 'github', description: 'github', id: uuidv4(), src: '' },
+          { alt: 'twitter', description: 'twitter', id: uuidv4(), src: '' },
+          {
+            alt: 'linkedin',
+            description: 'linkedin',
+            id: uuidv4(),
+            src: ''
+          }
+        ],
+        welcome: {
+          title: 'dieu te bénisse'
+        }
+      }
+    },
     home: {
       landing: {
         images: [

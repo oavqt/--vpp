@@ -1,16 +1,16 @@
 import { screen } from '@testing-library/react';
 import renderWithRouter from '../../../../setup/jest/utility/routes/routes';
-import Landing from '../Landing';
+import HomeLanding from '../HomeLanding';
 
-describe('Landing', () => {
-  test('expect a Landing component to be rendered', () => {
-    renderWithRouter(<Landing />);
+describe('HomeLanding', () => {
+  test('expect a HomeLanding component to be rendered', () => {
+    renderWithRouter(<HomeLanding />);
 
     expect(screen.getByRole('home-landing')).toBeInTheDocument();
   });
 
-  test('expect the Landing component to be rendered with (3) images and the welcome title(dieu te bénisse)', () => {
-    renderWithRouter(<Landing />);
+  test('expect the HomeLanding component to be rendered with (3) images and the welcome title(dieu te bénisse)', () => {
+    renderWithRouter(<HomeLanding />);
 
     expect(screen.getAllByRole('img')).toHaveLength(3);
 
