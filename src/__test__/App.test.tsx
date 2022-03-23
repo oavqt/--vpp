@@ -15,5 +15,11 @@ describe('App', () => {
 
       expect(screen.getByRole('about')).toBeInTheDocument();
     });
+
+    test('expect the Contact component to be rendered on route(/contact)', () => {
+      renderWithRouter(<App />, { route: 'contact' });
+
+      expect(screen.getByRole('contact')).toBeInTheDocument();
+    });
   });
 });
