@@ -16,7 +16,7 @@ const HomeLanding: FC = () => {
         ))}
       </StyledHomeLandingImagesContainer>
       <div>
-        <h2>{assets.pages.home.landing.welcome.title}</h2>
+        <h2>{assets.pages.home.landing.message.primary}</h2>
       </div>
     </StyledHomeLanding>
   );

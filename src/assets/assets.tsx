@@ -56,8 +56,9 @@ const assets = {
             src: ''
           }
         ],
-        welcome: {
-          title: 'dieu te bénisse'
+        message: {
+          primary: 'dieu te bénisse',
+          secondary: 'dieu te bénisse'
         }
       }
     },
@@ -73,8 +74,8 @@ const assets = {
             src: ''
           }
         ],
-        welcome: {
-          title: 'dieu te bénisse'
+        message: {
+          primary: 'dieu te bénisse'
         }
       }
     },

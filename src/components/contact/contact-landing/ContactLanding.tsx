@@ -8,6 +8,9 @@ import StyledContactLanding, {
 const ContactLanding: FC = () => {
   return (
     <StyledContactLanding>
+      <div>
+        <h2>{assets.pages.contact.landing.message.primary}</h2>
+      </div>
       <StyledContactLandingImagesContainer>
         {assets.pages.contact.landing.images.map((image) => (
           <div key={uuidv4()}>
@@ -15,9 +18,6 @@ const ContactLanding: FC = () => {
           </div>
         ))}
       </StyledContactLandingImagesContainer>
-      <div>
-        <h2>{assets.pages.contact.landing.welcome.title}</h2>
-      </div>
     </StyledContactLanding>
   );
 };
