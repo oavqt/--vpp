@@ -19,7 +19,7 @@ const StyledAboutGrid = styled.div`
   display: grid;
   gap: 2em;
   grid: repeat(2, auto) / 3fr 1fr;
-  grid-template-areas: 'description timeline' 'technology timeline';
+  grid-template-areas: 'information timeline' 'technology timeline';
   justify-content: center;
 `;
 

@@ -65,8 +65,8 @@ describe('ProjectsDisplay', () => {
     ).toBeInTheDocument();
 
     expect(
-      screen.getByRole('projects-display-description-body').textContent
-    ).toStrictEqual(testProjectsDisplayProps.description.body);
+      screen.getByRole('projects-display-description-body')
+    ).toHaveTextContent(testProjectsDisplayProps.description.body);
 
     expect(screen.getByRole('img', { name: '--alt' })).toHaveAttribute(
       'src',

@@ -15,7 +15,7 @@ const StyledAboutTechnologyArticle = styled.article``;
 const StyledAboutTechnologyHeading = styled.h2``;
 const StyledAboutTechnologyImageContainer = styled.div``;
 const StyledAboutTechnologyParagraph = styled.p.attrs(() => ({
-  role: 'about-technology-information'
+  role: 'about-technology-body'
 }))``;
 
 export {

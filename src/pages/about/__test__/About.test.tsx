@@ -9,10 +9,10 @@ describe('About', () => {
     expect(screen.getByRole('about')).toBeInTheDocument();
   });
 
-  test('expect the About component to be rendered with a AboutDescription component', () => {
+  test('expect the About component to be rendered with a AboutInformation component', () => {
     renderWithRouter(<About />);
 
-    expect(screen.getByRole('about-description')).toBeInTheDocument();
+    expect(screen.getByRole('about-information')).toBeInTheDocument();
   });
 
   test('expect the About component to be rendered with a AboutTechnology component', () => {

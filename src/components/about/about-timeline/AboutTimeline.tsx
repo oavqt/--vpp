@@ -1,6 +1,5 @@
 import { FC } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-import assets from '../../../assets/assets';
 import StyledAboutTimeline, {
   StyledAboutTimelineArticle,
   StyledAboutTimelineHeading,
@@ -8,20 +7,33 @@ import StyledAboutTimeline, {
   StyledAboutTimelineParagraph
 } from './AboutTimeline.styled';
 
-const AboutTimeline: FC = () => {
+interface AboutTimelineProps {
+  timeline: {
+    description: {
+      body: string;
+      title: string;
+    };
+    images: {
+      alt: string;
+      src: string;
+    }[];
+  };
+}
+
+const AboutTimeline: FC<AboutTimelineProps> = (props) => {
   return (
     <StyledAboutTimeline>
       <StyledAboutTimelineArticle>
         <div>
           <StyledAboutTimelineHeading>
-            {assets.pages.about.timeline.description.title}
+            {props.timeline.description.title}
           </StyledAboutTimelineHeading>
           <StyledAboutTimelineParagraph>
-            {assets.pages.about.timeline.description.body}
+            {props.timeline.description.body}
           </StyledAboutTimelineParagraph>
         </div>
         <StyledAboutTimelineImageContainer>
-          {assets.pages.about.timeline.images.map((item) => (
+          {props.timeline.images.map((item) => (
             <div key={uuidv4()}>
               <img alt={item.alt} src={item.src} />
             </div>

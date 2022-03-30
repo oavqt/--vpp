@@ -3,18 +3,20 @@ import { v4 as uuidv4 } from 'uuid';
 const assets = {
   pages: {
     about: {
-      description: {
-        title: 'dieu te bénisse',
-        body: 'je remercie mon dieu à chaque souvenir de toi, que dieu te bénisse je remercie mon dieu à chaque souvenir de toi, que dieu te bénisse'
+      information: {
+        description: {
+          title: 'dieu te bénisse',
+          body: 'je remercie mon dieu à chaque souvenir de toi, que dieu te bénisse je remercie mon dieu à chaque souvenir de toi, que dieu te bénisse'
+        },
+        images: [
+          {
+            alt: 'about-information',
+            description: 'about-information',
+            id: uuidv4(),
+            src: ''
+          }
+        ]
       },
-      images: [
-        {
-          alt: 'about-description',
-          description: 'about-description',
-          id: uuidv4(),
-          src: ''
-        }
-      ],
       technology: {
         description: {
           title: 'dieu te bénisse',

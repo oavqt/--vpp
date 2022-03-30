@@ -8,20 +8,33 @@ import StyledAboutTechnology, {
   StyledAboutTechnologyParagraph
 } from './AboutTechnology.styled';
 
-const AboutTechnology: FC = () => {
+interface AboutTechnologyProps {
+  technology: {
+    description: {
+      body: string;
+      title: string;
+    };
+    images: {
+      alt: string;
+      src: string;
+    }[];
+  };
+}
+
+const AboutTechnology: FC<AboutTechnologyProps> = (props) => {
   return (
     <StyledAboutTechnology>
       <StyledAboutTechnologyArticle>
         <div>
           <StyledAboutTechnologyHeading>
-            {assets.pages.about.technology.description.title}
+            {props.technology.description.title}
           </StyledAboutTechnologyHeading>
           <StyledAboutTechnologyParagraph>
-            {assets.pages.about.technology.description.body}
+            {props.technology.description.body}
           </StyledAboutTechnologyParagraph>
         </div>
         <StyledAboutTechnologyImageContainer>
-          {assets.pages.about.technology.images.map((item) => (
+          {props.technology.images.map((item) => (
             <div key={uuidv4()}>
               <img alt={item.alt} src={item.src} />
             </div>

@@ -15,7 +15,7 @@ const StyledAboutTimelineArticle = styled.article``;
 const StyledAboutTimelineHeading = styled.h2``;
 const StyledAboutTimelineImageContainer = styled.div``;
 const StyledAboutTimelineParagraph = styled.p.attrs(() => ({
-  role: 'about-timeline-information'
+  role: 'about-timeline-body'
 }))``;
 
 export {

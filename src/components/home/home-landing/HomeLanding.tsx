@@ -1,22 +1,33 @@
 import { FC } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-import assets from '../../../assets/assets';
 import StyledHomeLanding, {
   StyledHomeLandingImagesContainer
 } from './HomeLanding.styled';
 
-const HomeLanding: FC = () => {
+interface HomeLandingProps {
+  landing: {
+    images: {
+      alt: string;
+      src: string;
+    }[];
+    message: {
+      primary: string;
+    };
+  };
+}
+
+const HomeLanding: FC<HomeLandingProps> = (props) => {
   return (
     <StyledHomeLanding>
       <StyledHomeLandingImagesContainer>
-        {assets.pages.home.landing.images.map((image) => (
+        {props.landing.images.map((image) => (
           <div key={uuidv4()}>
             <img alt={image.alt} src={image.src} />
           </div>
         ))}
       </StyledHomeLandingImagesContainer>
       <div>
-        <h2>{assets.pages.home.landing.message.primary}</h2>
+        <h2>{props.landing.message.primary}</h2>
       </div>
     </StyledHomeLanding>
   );
