@@ -14,8 +14,6 @@ describe('AboutDescription', () => {
     expect(screen.getByRole('about-description')).toBeInTheDocument();
     expect(screen.getByRole('heading')).toBeInTheDocument();
     expect(screen.getByRole('img')).toBeInTheDocument();
-    expect(
-      screen.getByRole('about-description-information')
-    ).toBeInTheDocument();
+    expect(screen.getByRole('about-description-body')).toBeInTheDocument();
   });
 });

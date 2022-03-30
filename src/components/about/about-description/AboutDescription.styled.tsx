@@ -18,7 +18,7 @@ const StyledAboutDescriptionImageContainer = styled.div`
   shape-outside: circle(100%);
 `;
 const StyledAboutDescriptionParagraph = styled.p.attrs(() => ({
-  role: 'about-description-information'
+  role: 'about-description-body'
 }))``;
 
 export {

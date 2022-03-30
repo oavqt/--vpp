@@ -1,23 +1,37 @@
 import { render, screen } from '@testing-library/react';
-import ProjectNav from '../ProjectNav';
+import ProjectNav from '../ProjectsNav';
 
-describe('ProjectNav', () => {
-  const testHelperGenerateProjectObjects = (length: number) => {
+describe('ProjectsNav', () => {
+  const testHelperGenerateProjectsObjects = (length: number) => {
     const toilet = [];
 
     for (let i = 0; i < length; i++) {
       toilet.push({
         assets: {
-          image: '',
-          technology: ''
+          image: {
+            alt: '',
+            src: ''
+          },
+          technology: [
+            {
+              alt: '',
+              src: ''
+            }
+          ]
         },
         description: {
           body: '',
           title: ''
         },
         external: {
-          code: '',
-          live: ''
+          code: {
+            message: '',
+            path: ''
+          },
+          website: {
+            message: '',
+            path: ''
+          }
         }
       });
     }
@@ -25,47 +39,47 @@ describe('ProjectNav', () => {
     return toilet;
   };
 
-  const testProjectNavProps = {
+  const testProjectsNavProps = {
     display: {
-      displayProject: jest.fn(() => {
+      displayProjects: jest.fn(() => {
         return;
       })
     },
     navigation: {
-      projects: testHelperGenerateProjectObjects(1)
+      projects: testHelperGenerateProjectsObjects(1)
     }
   };
 
-  test('expect a ProjectNav component to be rendered', () => {
+  test('expect a ProjectsNav component to be rendered', () => {
     render(
       <ProjectNav
-        display={testProjectNavProps.display}
-        navigation={testProjectNavProps.navigation}
+        display={testProjectsNavProps.display}
+        navigation={testProjectsNavProps.navigation}
       />
     );
 
-    expect(screen.getByRole('project-navigation')).toBeInTheDocument();
+    expect(screen.getByRole('projects-navigation')).toBeInTheDocument();
   });
 
-  test('expect the ProjectNav component to be rendered with (1) buttons', () => {
+  test('expect the ProjectsNav component to be rendered with (1) buttons', () => {
     render(
       <ProjectNav
-        display={testProjectNavProps.display}
-        navigation={testProjectNavProps.navigation}
+        display={testProjectsNavProps.display}
+        navigation={testProjectsNavProps.navigation}
       />
     );
 
     expect(screen.getAllByRole('button')).toHaveLength(1);
   });
 
-  test('expect the ProjectNav component to be rendered with (3) buttons', () => {
-    testProjectNavProps.navigation.projects =
-      testHelperGenerateProjectObjects(4);
+  test('expect the ProjectsNav component to be rendered with (3) buttons', () => {
+    testProjectsNavProps.navigation.projects =
+      testHelperGenerateProjectsObjects(4);
 
     render(
       <ProjectNav
-        display={testProjectNavProps.display}
-        navigation={testProjectNavProps.navigation}
+        display={testProjectsNavProps.display}
+        navigation={testProjectsNavProps.navigation}
       />
     );
 
