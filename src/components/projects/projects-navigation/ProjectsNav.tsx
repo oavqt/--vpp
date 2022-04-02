@@ -20,9 +20,18 @@ const ProjectsNav: FC<ProjectsNavProps> = (props) => {
   return (
     <StyledProjectsNav>
       <StyledProjectsNavList>
-        {props.navigation.projects.map(() => (
+        {props.navigation.projects.map((item) => (
           <li key={uuidv4()}>
-            <StyledProjectsNavButton></StyledProjectsNavButton>
+            <StyledProjectsNavButton
+              onClick={() =>
+                props.display?.dispatch
+                  ? props.display.dispatch({
+                      type: 'replace',
+                      payload: { ...item }
+                    })
+                  : ''
+              }
+            ></StyledProjectsNavButton>
           </li>
         ))}
       </StyledProjectsNavList>

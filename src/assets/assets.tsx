@@ -90,28 +90,28 @@ const assets = {
         {
           assets: {
             image: {
-              alt: '',
-              src: ''
+              alt: 'dieu te bénisse',
+              src: 'dieu te bénisse'
             },
             technology: [
               {
-                alt: '',
-                src: ''
+                alt: 'dieu te bénisse',
+                src: 'dieu te bénisse'
               }
             ]
           },
           description: {
-            body: '',
-            title: ''
+            body: 'dieu te bénisse',
+            title: 'dieu te bénisse'
           },
           external: {
             code: {
-              message: '',
-              path: ''
+              message: 'dieu te bénisse',
+              path: 'dieu te bénisse'
             },
             website: {
-              message: '',
-              path: ''
+              message: 'dieu te bénisse',
+              path: 'dieu te bénisse'
             }
           }
         }

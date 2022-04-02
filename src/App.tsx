@@ -5,6 +5,7 @@ import Nav from './components/navigation/Nav';
 import About from './pages/about/About';
 import Contact from './pages/contact/Contact';
 import Home from './pages/home/Home';
+import Projects from './pages/projects/Projects';
 
 const App: FC = () => {
   return (
@@ -15,7 +16,7 @@ const App: FC = () => {
           <Route path='/' element={<Home />} />
           <Route path='about' element={<About />} />
           <Route path='contact' element={<Contact />} />
-          {/* <Route path='projects' element={<Projects />} /> */}
+          <Route path='projects' element={<Projects />} />
         </Routes>
       }
     </StyledApp>
