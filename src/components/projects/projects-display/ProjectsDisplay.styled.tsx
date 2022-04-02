@@ -8,7 +8,15 @@ const StyledProjectsDisplay = styled.section.attrs(() => ({
 export default StyledProjectsDisplay;
 //
 
-//ProjectDisplay Elements
+//ProjectDisplay
+const StyledProjectsDisplayLanding = styled.div.attrs(() => ({
+  role: 'projects-display-landing'
+}))``;
+const StyledProjectsDisplayLandingHeading = styled.h2``;
+const StyledProjectsDisplayLandingParagraph = styled.p.attrs(() => ({
+  role: 'projects-display-landing-description-body'
+}))``;
+
 const StyledProjectsDisplayHeading = styled.h2``;
 const StyledProjectsDisplayImage = styled.img``;
 const StyledProjectsDisplayLink = styled.a``;
@@ -18,6 +26,9 @@ const StyledProjectsDisplayParagraph = styled.p.attrs(() => ({
 const StyledProjectsDisplayTechnologyImageContainer = styled.div``;
 
 export {
+  StyledProjectsDisplayLanding,
+  StyledProjectsDisplayLandingHeading,
+  StyledProjectsDisplayLandingParagraph,
   StyledProjectsDisplayHeading,
   StyledProjectsDisplayImage,
   StyledProjectsDisplayLink,

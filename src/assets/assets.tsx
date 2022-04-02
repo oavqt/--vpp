@@ -81,6 +81,42 @@ const assets = {
         }
       }
     },
+    projects: {
+      description: {
+        title: 'dieu te bénisse',
+        body: 'je remercie mon dieu à chaque souvenir de toi, que dieu te bénisse je remercie mon dieu à chaque souvenir de toi, que dieu te bénisse'
+      },
+      display: [
+        {
+          assets: {
+            image: {
+              alt: '',
+              src: ''
+            },
+            technology: [
+              {
+                alt: '',
+                src: ''
+              }
+            ]
+          },
+          description: {
+            body: '',
+            title: ''
+          },
+          external: {
+            code: {
+              message: '',
+              path: ''
+            },
+            website: {
+              message: '',
+              path: ''
+            }
+          }
+        }
+      ]
+    },
     routes: {
       navigation: [
         { desciption: 'about', path: 'about' },

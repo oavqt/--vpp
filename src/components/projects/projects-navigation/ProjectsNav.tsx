@@ -1,18 +1,18 @@
-import { FC } from 'react';
+import { Dispatch, FC } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-import ProjectsObject from '../../../pages/projects/Projects';
+import { ProjectAction, ProjectObject } from '../../../pages/projects/Projects';
 import StyledProjectsNav, {
   StyledProjectsNavButton,
   StyledProjectsNavList
 } from './ProjectsNav.styled';
 
 interface ProjectsNavProps {
-  display: {
+  display?: {
     // eslint-disable-next-line no-unused-vars
-    displayProjects: (item: ProjectsObject) => void;
+    dispatch?: Dispatch<ProjectAction>;
   };
   navigation: {
-    projects: ProjectsObject[];
+    projects: ProjectObject[];
   };
 }
 

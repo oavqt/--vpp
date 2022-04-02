@@ -40,34 +40,19 @@ describe('ProjectsNav', () => {
   };
 
   const testProjectsNavProps = {
-    display: {
-      displayProjects: jest.fn(() => {
-        return;
-      })
-    },
     navigation: {
       projects: testHelperGenerateProjectsObjects(1)
     }
   };
 
   test('expect a ProjectsNav component to be rendered', () => {
-    render(
-      <ProjectNav
-        display={testProjectsNavProps.display}
-        navigation={testProjectsNavProps.navigation}
-      />
-    );
+    render(<ProjectNav navigation={testProjectsNavProps.navigation} />);
 
     expect(screen.getByRole('projects-navigation')).toBeInTheDocument();
   });
 
   test('expect the ProjectsNav component to be rendered with (1) buttons', () => {
-    render(
-      <ProjectNav
-        display={testProjectsNavProps.display}
-        navigation={testProjectsNavProps.navigation}
-      />
-    );
+    render(<ProjectNav navigation={testProjectsNavProps.navigation} />);
 
     expect(screen.getAllByRole('button')).toHaveLength(1);
   });
@@ -76,12 +61,7 @@ describe('ProjectsNav', () => {
     testProjectsNavProps.navigation.projects =
       testHelperGenerateProjectsObjects(4);
 
-    render(
-      <ProjectNav
-        display={testProjectsNavProps.display}
-        navigation={testProjectsNavProps.navigation}
-      />
-    );
+    render(<ProjectNav navigation={testProjectsNavProps.navigation} />);
 
     expect(screen.getAllByRole('button')).toHaveLength(4);
   });
