@@ -3,7 +3,8 @@ import { v4 as uuidv4 } from 'uuid';
 import { ProjectAction, ProjectObject } from '../../../pages/projects/Projects';
 import StyledProjectsNav, {
   StyledProjectsNavButton,
-  StyledProjectsNavList
+  StyledProjectsNavList,
+  StyledProjectsNavListItem
 } from './ProjectsNav.styled';
 
 interface ProjectsNavProps {
@@ -20,19 +21,39 @@ const ProjectsNav: FC<ProjectsNavProps> = (props) => {
   return (
     <StyledProjectsNav>
       <StyledProjectsNavList>
-        {props.navigation.projects.map((item) => (
-          <li key={uuidv4()}>
+        {props.navigation.projects.map((item, index) => (
+          <StyledProjectsNavListItem key={uuidv4()}>
             <StyledProjectsNavButton
-              onClick={() =>
+              onClick={() => {
                 props.display?.dispatch
                   ? props.display.dispatch({
-                      type: 'replace',
-                      payload: { ...item }
+                      type: 'set active',
+                      payload: {
+                        current: { ...item },
+                        index: index
+                      }
                     })
+                  : '';
+
+                props.display?.dispatch
+                  ? props.display.dispatch({
+                      type: 'set current',
+                      payload: {
+                        current: { ...item },
+                        index: index
+                      }
+                    })
+                  : '';
+              }}
+              className={
+                item.internal.active
+                  ? '--projects-nav-active'
+                  : item.internal.inactive
+                  ? '--projects-nav-inactive'
                   : ''
               }
             ></StyledProjectsNavButton>
-          </li>
+          </StyledProjectsNavListItem>
         ))}
       </StyledProjectsNavList>
     </StyledProjectsNav>

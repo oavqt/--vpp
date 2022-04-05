@@ -23,6 +23,11 @@ describe('ProjectsNav', () => {
           body: '',
           title: ''
         },
+        internal: {
+          active: false,
+          empty: false,
+          inactive: false
+        },
         external: {
           code: {
             message: '',

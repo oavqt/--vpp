@@ -101,8 +101,79 @@ const assets = {
             ]
           },
           description: {
-            body: 'dieu te bénisse',
+            body: 'je remercie mon dieu à chaque souvenir de toi, que dieu te bénisse je remercie mon dieu à chaque souvenir de toi, que dieu te bénisse',
             title: 'dieu te bénisse'
+          },
+          internal: {
+            active: false,
+            empty: false,
+            inactive: false
+          },
+          external: {
+            code: {
+              message: 'dieu te bénisse',
+              path: 'dieu te bénisse'
+            },
+            website: {
+              message: 'dieu te bénisse',
+              path: 'dieu te bénisse'
+            }
+          }
+        },
+        {
+          assets: {
+            image: {
+              alt: 'dieu te bénisse',
+              src: 'dieu te bénisse'
+            },
+            technology: [
+              {
+                alt: 'dieu te bénisse',
+                src: 'dieu te bénisse'
+              }
+            ]
+          },
+          description: {
+            body: 'je remercie mon dieu à chaque souvenir de toi, que dieu te bénisse je remercie mon dieu à chaque souvenir de toi, que dieu te bénisse',
+            title: 'dieu te bénisse'
+          },
+          internal: {
+            active: false,
+            empty: false,
+            inactive: false
+          },
+          external: {
+            code: {
+              message: 'dieu te bénisse',
+              path: 'dieu te bénisse'
+            },
+            website: {
+              message: 'dieu te bénisse',
+              path: 'dieu te bénisse'
+            }
+          }
+        },
+        {
+          assets: {
+            image: {
+              alt: 'dieu te bénisse',
+              src: 'dieu te bénisse'
+            },
+            technology: [
+              {
+                alt: 'dieu te bénisse',
+                src: 'dieu te bénisse'
+              }
+            ]
+          },
+          description: {
+            body: 'je remercie mon dieu à chaque souvenir de toi, que dieu te bénisse je remercie mon dieu à chaque souvenir de toi, que dieu te bénisse',
+            title: 'dieu te bénisse'
+          },
+          internal: {
+            active: false,
+            empty: false,
+            inactive: false
           },
           external: {
             code: {

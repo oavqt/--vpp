@@ -17,6 +17,10 @@ export default StyledNav;
 const StyledNavLink = styled(NavLink)`
   color: #313131;
   text-decoration: none;
+
+  &.active {
+    color: #ffb7c3;
+  }
 `;
 
 const StyledNavList = styled.ul`

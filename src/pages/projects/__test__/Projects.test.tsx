@@ -16,10 +16,38 @@ describe('Projects', () => {
   });
 
   describe('ProjectsNav ProjectsDisplay --Functionality', () => {
+    test('expect ProjectNavs button to cycle between classnames --project-nav-active, --project-nav-inactive, and no classname', () => {
+      render(<Projects />);
+
+      userEvent.click(screen.getAllByRole('button')[0]);
+
+      expect(screen.getAllByRole('button')[0]).toHaveClass(
+        '--projects-nav-active'
+      );
+
+      userEvent.click(screen.getAllByRole('button')[1]);
+
+      expect(screen.getAllByRole('button')[0]).not.toHaveClass(
+        '--projects-nav-active'
+      );
+      expect(screen.getAllByRole('button')[0]).toHaveClass(
+        '--projects-nav-inactive'
+      );
+
+      userEvent.click(screen.getAllByRole('button')[2]);
+
+      expect(screen.getAllByRole('button')[0]).not.toHaveClass(
+        '--projects-nav-active'
+      );
+      expect(screen.getAllByRole('button')[0]).not.toHaveClass(
+        '--projects-nav-inactive'
+      );
+    });
+
     test('expect ProjectsDisplay to display a project when clicking on a button from ProjectsNav', () => {
       render(<Projects />);
 
-      userEvent.click(screen.getByRole('button'));
+      userEvent.click(screen.getAllByRole('button')[0]);
 
       expect(screen.getByRole('projects-display-project')).toBeInTheDocument();
     });

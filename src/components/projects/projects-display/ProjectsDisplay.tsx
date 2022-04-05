@@ -10,7 +10,10 @@ import StyledProjectsDisplay, {
   StyledProjectsDisplayParagraph,
   StyledProjectsDisplayTechnologyImageContainer,
   StyledProjectsDisplayLanding,
-  StyledProjectsDisplayProject
+  StyledProjectsDisplayProject,
+  StyledProjectsDisplayLinkContainer,
+  StyledProjectsDisplayImageContainer,
+  StyledProjectsDisplayProjectContainer
 } from './ProjectsDisplay.styled';
 
 interface ProjectDisplayProps {
@@ -20,7 +23,7 @@ interface ProjectDisplayProps {
 const ProjectsDisplay: FC<ProjectDisplayProps> = (props) => {
   return (
     <StyledProjectsDisplay>
-      {props.display.empty ? (
+      {props.display.internal.empty ? (
         <StyledProjectsDisplayLanding>
           <StyledProjectsDisplayLandingHeading>
             {props.display.description.title}
@@ -31,8 +34,8 @@ const ProjectsDisplay: FC<ProjectDisplayProps> = (props) => {
         </StyledProjectsDisplayLanding>
       ) : (
         <StyledProjectsDisplayProject>
-          <div>
-            <div>
+          <StyledProjectsDisplayProjectContainer>
+            <StyledProjectsDisplayImageContainer>
               <div>
                 <StyledProjectsDisplayImage
                   alt={props.display.assets.image.alt}
@@ -46,7 +49,7 @@ const ProjectsDisplay: FC<ProjectDisplayProps> = (props) => {
                   </div>
                 ))}
               </StyledProjectsDisplayTechnologyImageContainer>
-            </div>
+            </StyledProjectsDisplayImageContainer>
             <div>
               <StyledProjectsDisplayHeading>
                 {props.display.description.title}
@@ -55,8 +58,8 @@ const ProjectsDisplay: FC<ProjectDisplayProps> = (props) => {
                 {props.display.description.body}
               </StyledProjectsDisplayParagraph>
             </div>
-          </div>
-          <div>
+          </StyledProjectsDisplayProjectContainer>
+          <StyledProjectsDisplayLinkContainer>
             <StyledProjectsDisplayLink
               href={props.display.external.code.path}
               target='_blank'
@@ -69,7 +72,7 @@ const ProjectsDisplay: FC<ProjectDisplayProps> = (props) => {
             >
               {props.display.external.website.message}
             </StyledProjectsDisplayLink>
-          </div>
+          </StyledProjectsDisplayLinkContainer>
         </StyledProjectsDisplayProject>
       )}
     </StyledProjectsDisplay>

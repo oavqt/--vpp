@@ -20,6 +20,11 @@ describe('ProjectsDisplay', () => {
       body: '--title',
       title: '--body'
     },
+    internal: {
+      active: false,
+      empty: false,
+      inactive: false
+    },
     external: {
       code: {
         message: '--code',

@@ -1,4 +1,4 @@
-import { FC, useEffect, useReducer, useState } from 'react';
+import { FC, useEffect, useReducer } from 'react';
 import assets from '../../assets/assets';
 import ProjectsDisplay from '../../components/projects/projects-display/ProjectsDisplay';
 import ProjectsNav from '../../components/projects/projects-navigation/ProjectsNav';
@@ -6,7 +6,6 @@ import StyledProjects from './Projects.styled';
 
 //ProjectObject Type
 interface ProjectObject {
-  empty?: boolean;
   assets: {
     image: {
       alt: string;
@@ -20,6 +19,11 @@ interface ProjectObject {
   description: {
     body: string;
     title: string;
+  };
+  internal: {
+    active: boolean;
+    empty: boolean;
+    inactive: boolean;
   };
   external: {
     code: {
@@ -38,65 +42,108 @@ export { type ProjectObject };
 
 //Project State and Action Types
 interface ProjectState {
-  project: ProjectObject;
+  project: {
+    complete: ProjectObject[];
+    current: ProjectObject;
+  };
 }
 
 interface ProjectAction {
-  payload?: ProjectObject;
+  payload?: {
+    current: ProjectObject;
+    index: number;
+  };
   type: string;
 }
 
 export { type ProjectAction };
 //
 
-const initialProject = {
-  project: {
-    empty: true,
-    assets: {
-      image: {
-        alt: '',
-        src: ''
-      },
-      technology: [
-        {
-          alt: '',
-          src: ''
+const initialProjectState = () => {
+  const queryProjectComplete = assets.pages.projects.display;
+
+  return {
+    project: {
+      complete: queryProjectComplete,
+      current: {
+        assets: {
+          image: {
+            alt: '',
+            src: ''
+          },
+          technology: [
+            {
+              alt: '',
+              src: ''
+            }
+          ]
+        },
+        description: {
+          body: '',
+          title: ''
+        },
+        internal: {
+          active: false,
+          empty: true,
+          inactive: false
+        },
+        external: {
+          code: {
+            message: '',
+            path: ''
+          },
+          website: {
+            message: '',
+            path: ''
+          }
         }
-      ]
-    },
-    description: {
-      body: '',
-      title: ''
-    },
-    external: {
-      code: {
-        message: '',
-        path: ''
-      },
-      website: {
-        message: '',
-        path: ''
       }
     }
-  }
+  };
 };
 
 const reducer = (state: ProjectState, action: ProjectAction) => {
   switch (action.type) {
-    case 'replace': {
-      if (action.payload) return { project: { ...action.payload } };
-      else return state;
-    }
     case 'init': {
       return {
         project: {
           ...state.project,
-          description: {
-            body: assets.pages.projects.description.body,
-            title: assets.pages.projects.description.title
+          current: {
+            ...state.project.current,
+            description: {
+              body: assets.pages.projects.description.body,
+              title: assets.pages.projects.description.title
+            }
           }
         }
       };
+    }
+    case 'set active': {
+      const copy = [...state.project.complete];
+
+      copy.forEach((item) => {
+        item.internal.active
+          ? ((item.internal.active = false), (item.internal.inactive = true))
+          : ((item.internal.active = false), (item.internal.inactive = false));
+      });
+
+      if (action.payload) {
+        copy[action.payload.index].internal.active = true;
+
+        return {
+          project: {
+            ...state.project,
+            complete: [...copy]
+          }
+        };
+      } else return state;
+    }
+    case 'set current': {
+      if (action.payload)
+        return {
+          project: { ...state.project, current: { ...action.payload.current } }
+        };
+      else return state;
     }
     default: {
       return state;
@@ -105,22 +152,19 @@ const reducer = (state: ProjectState, action: ProjectAction) => {
 };
 
 const Projects: FC = () => {
-  const [state, dispatch] = useReducer(reducer, initialProject);
-  const [projects, setProjects] = useState<Array<ProjectObject>>([]);
+  const [state, dispatch] = useReducer(reducer, initialProjectState());
 
   useEffect(() => {
-    const updateProjects = (): void => {
-      setProjects(assets.pages.projects.display);
-    };
-
     dispatch({ type: 'init' });
-    updateProjects();
   }, []);
 
   return (
     <StyledProjects>
-      <ProjectsDisplay display={{ ...state.project }} />
-      <ProjectsNav display={{ dispatch }} navigation={{ projects: projects }} />
+      <ProjectsDisplay display={{ ...state.project.current }} />
+      <ProjectsNav
+        display={{ dispatch }}
+        navigation={{ projects: state.project.complete }}
+      />
     </StyledProjects>
   );
 };
