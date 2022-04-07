@@ -156,6 +156,8 @@ const Projects: FC = () => {
 
   useEffect(() => {
     dispatch({ type: 'init' });
+
+    //return dispatch({type: 'clear'})
   }, []);
 
   return (

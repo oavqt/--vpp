@@ -37,9 +37,9 @@ const commonConfig = {
       }
     }),
     new HtmlWebpackPlugin({
-      // favicon: '',
+      favicon: './src/assets/images/vfav.png',
       template: './public/index.html',
-      title: 'le cvlevc'
+      title: 'ortizqtv'
     })
   ],
   resolve: {

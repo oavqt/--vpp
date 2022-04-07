@@ -8,17 +8,18 @@ const StyledHomeLanding = styled.section.attrs(() => ({
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100vh;
-  width: 100vw;
 `;
 
 export default StyledHomeLanding;
 //
 
 //HomeLanding Elements
-const StyledHomeLandingImagesContainer = styled.div`
+const StyledHomeLandingImage = styled.img`
+  margin: 0 0.2em;
+`;
+const StyledHomeLandingImageContainer = styled.div`
   display: flex;
 `;
 
-export { StyledHomeLandingImagesContainer };
+export { StyledHomeLandingImage, StyledHomeLandingImageContainer };
 //

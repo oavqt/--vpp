@@ -8,6 +8,7 @@ const StyledNav = styled.nav`
   flex-direction: column;
   height: 100%;
   justify-content: center;
+  margin: 0 2em;
 `;
 
 export default StyledNav;
@@ -34,11 +35,7 @@ const StyledNavList = styled.ul`
 
 const StyledNavSection = styled.section.attrs(() => ({
   role: 'nav'
-}))`
-  height: 100vh;
-  position: absolute;
-  width: 12vw;
-`;
+}))``;
 
 export { StyledNavLink, StyledNavList, StyledNavSection };
 //

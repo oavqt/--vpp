@@ -4,10 +4,10 @@ import styled from 'styled-components';
 const StyledAbout = styled.section.attrs(() => ({ role: 'about' }))`
   align-items: center;
   display: flex;
-  height: 100vh;
+  height: 100%;
   justify-content: center;
   margin: auto;
-  width: 75vw;
+  width: 100%;
 `;
 
 export default StyledAbout;

@@ -1,4 +1,8 @@
 import { v4 as uuidv4 } from 'uuid';
+import vdark from './images/vdark.png';
+import vlogo from './images/vlogo.png';
+import vlight from './images/vlight.png';
+import vpurple from './images/vpurple.png';
 
 const assets = {
   pages: {
@@ -13,7 +17,7 @@ const assets = {
             alt: 'about-information',
             description: 'about-information',
             id: uuidv4(),
-            src: ''
+            src: vlogo
           }
         ]
       },
@@ -59,7 +63,7 @@ const assets = {
           }
         ],
         message: {
-          primary: 'dieu te bénisse',
+          primary: 'ortizqtv@gmail.com',
           secondary: 'dieu te bénisse'
         }
       }
@@ -67,17 +71,28 @@ const assets = {
     home: {
       landing: {
         images: [
-          { alt: 'about', description: 'about', id: uuidv4(), src: '' },
-          { alt: 'contact', description: 'contact', id: uuidv4(), src: '' },
+          { alt: 'about', description: 'about', id: uuidv4(), src: vlight },
+          {
+            alt: 'contact',
+            description: 'contact',
+            id: uuidv4(),
+            src: vpurple
+          },
+          {
+            alt: 'home',
+            description: 'home',
+            id: uuidv4(),
+            src: vlogo
+          },
           {
             alt: 'projects',
             description: 'projects',
             id: uuidv4(),
-            src: ''
+            src: vdark
           }
         ],
         message: {
-          primary: 'dieu te bénisse'
+          primary: 'allo'
         }
       }
     },

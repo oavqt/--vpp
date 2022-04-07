@@ -5,7 +5,7 @@ const StyledProjects = styled.section.attrs(() => ({ role: 'projects' }))`
   align-items: center;
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 100%;
   justify-content: center;
   width: 100%;
 `;

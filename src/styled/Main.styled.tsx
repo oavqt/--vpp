@@ -28,8 +28,11 @@ const StyledMain = styled.createGlobalStyle`
     font-family: 'Poppins', sans-serif;
   }
 
-  .app {
+  .root {
+    align-items: center;
+    display: flex;
     height: 100vh;
+    justify-content: center;
     width: 100vw;
   }
 `;

@@ -7,8 +7,6 @@ const StyledContactLanding = styled.section.attrs(() => ({
   align-items: center;
   display: flex;
   justify-content: center;
-  height: 100vh;
-  width: 100vw;
 `;
 
 export default StyledContactLanding;

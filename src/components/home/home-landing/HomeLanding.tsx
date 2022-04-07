@@ -1,7 +1,8 @@
 import { FC } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import StyledHomeLanding, {
-  StyledHomeLandingImagesContainer
+  StyledHomeLandingImage,
+  StyledHomeLandingImageContainer
 } from './HomeLanding.styled';
 
 interface HomeLandingProps {
@@ -19,13 +20,13 @@ interface HomeLandingProps {
 const HomeLanding: FC<HomeLandingProps> = (props) => {
   return (
     <StyledHomeLanding>
-      <StyledHomeLandingImagesContainer>
+      <StyledHomeLandingImageContainer>
         {props.landing.images.map((image) => (
           <div key={uuidv4()}>
-            <img alt={image.alt} src={image.src} />
+            <StyledHomeLandingImage alt={image.alt} src={image.src} />
           </div>
         ))}
-      </StyledHomeLandingImagesContainer>
+      </StyledHomeLandingImageContainer>
       <div>
         <h2>{props.landing.message.primary}</h2>
       </div>
