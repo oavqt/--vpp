@@ -39,7 +39,7 @@ const commonConfig = {
     new HtmlWebpackPlugin({
       favicon: './src/assets/images/vfav.png',
       template: './public/index.html',
-      title: 'ortizqtv'
+      title: 'welcome\\⤥'
     })
   ],
   resolve: {

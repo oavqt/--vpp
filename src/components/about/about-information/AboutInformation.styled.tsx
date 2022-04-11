@@ -15,7 +15,7 @@ const StyledAboutInformationArticle = styled.article``;
 const StyledAboutInformationHeading = styled.h2``;
 const StyledAboutInformationImageContainer = styled.div`
   float: right;
-  shape-outside: circle(100%);
+  shape-outside: circle(50%);
 `;
 const StyledAboutInformationParagraph = styled.p.attrs(() => ({
   role: 'about-information-body'

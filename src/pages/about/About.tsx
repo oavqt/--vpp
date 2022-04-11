@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import assets from '../../assets/assets';
-import AboutInformation from '../../components/about/about-description/AboutInformation';
+import AboutInformation from '../../components/about/about-information/AboutInformation';
 import AboutTechnology from '../../components/about/about-technology/AboutTechnology';
 import AboutTimeline from '../../components/about/about-timeline/AboutTimeline';
 import StyledAbout, { StyledAboutGrid } from './About.styled';
