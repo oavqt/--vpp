@@ -1,18 +1,19 @@
 import { FC } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import StyledContactLanding, {
-  StyledContactLandingImagesContainer
+  StyledContactLandingLink,
+  StyledContactLandingLinkContainer
 } from './ContactLanding.styled';
 
 interface ContactLandingProps {
   landing: {
-    images: {
-      alt: string;
-      src: string;
-    }[];
     message: {
       primary: string;
     };
+    social: {
+      title: string;
+      path: string;
+    }[];
   };
 }
 
@@ -22,13 +23,15 @@ const ContactLanding: FC<ContactLandingProps> = (props) => {
       <div>
         <h2>{props.landing.message.primary}</h2>
       </div>
-      <StyledContactLandingImagesContainer>
-        {props.landing.images.map((item) => (
+      <StyledContactLandingLinkContainer>
+        {props.landing.social.map((item) => (
           <div key={uuidv4()}>
-            <img alt={item.alt} src={item.src} />
+            <StyledContactLandingLink href={item.path} target='_blank'>
+              {item.title}
+            </StyledContactLandingLink>
           </div>
         ))}
-      </StyledContactLandingImagesContainer>
+      </StyledContactLandingLinkContainer>
     </StyledContactLanding>
   );
 };

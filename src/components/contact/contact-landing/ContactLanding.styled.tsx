@@ -7,15 +7,25 @@ const StyledContactLanding = styled.section.attrs(() => ({
   align-items: center;
   display: flex;
   justify-content: center;
+  flex-direction: column;
 `;
 
 export default StyledContactLanding;
 //
 
 //ContactLanding Elements
-const StyledContactLandingImagesContainer = styled.div`
-  margin: 0 2em;
+const StyledContactLandingLink = styled.a`
+  color: #313131;
+  margin: 0 0.2em;
+  text-decoration: none;
+
+  :hover {
+    color: #00eeff;
+  }
+`;
+const StyledContactLandingLinkContainer = styled.div`
+  display: flex;
 `;
 
-export { StyledContactLandingImagesContainer };
+export { StyledContactLandingLink, StyledContactLandingLinkContainer };
 //

@@ -191,20 +191,24 @@ const assets = {
     },
     contact: {
       landing: {
-        images: [
-          { alt: 'github', description: 'github', id: uuidv4(), src: '' },
-          { alt: 'twitter', description: 'twitter', id: uuidv4(), src: '' },
-          {
-            alt: 'linkedin',
-            description: 'linkedin',
-            id: uuidv4(),
-            src: ''
-          }
-        ],
         message: {
           primary: 'ortizqtv@gmail.com\\⤥',
           secondary: 'dieu te bénisse'
-        }
+        },
+        social: [
+          {
+            title: 'github',
+            path: 'https://github.com/ortizqtv'
+          },
+          {
+            title: 'twitter',
+            path: 'https://twitter.com/ortizqtv'
+          },
+          {
+            title: 'linkedin',
+            path: 'https://www.linkedin.com/in/ortizqtv/'
+          }
+        ]
       }
     },
     home: {

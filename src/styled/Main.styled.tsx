@@ -25,6 +25,7 @@ const StyledMain = styled.createGlobalStyle`
   }
 
   body {
+    color: #313131;
     font-family: 'Poppins', sans-serif;
   }
 

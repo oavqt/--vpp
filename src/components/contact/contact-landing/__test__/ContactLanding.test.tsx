@@ -5,29 +5,23 @@ import ContactLanding from '../ContactLanding';
 describe('ContactLanding', () => {
   const testContactLandingProps = {
     landing: {
-      images: [
-        {
-          alt: '-0-alt',
-          description: '--0',
-          id: '-0-id',
-          src: '-0-src'
-        },
-        {
-          alt: '--1-alt',
-          description: '--1',
-          id: '--1-id',
-          src: '--1-src'
-        },
-        {
-          alt: '2-alt',
-          description: '2',
-          id: '--2-id',
-          src: '--2-src'
-        }
-      ],
       message: {
         primary: '--0'
-      }
+      },
+      social: [
+        {
+          title: '--titleA',
+          path: '--pathA'
+        },
+        {
+          title: '--titleB',
+          path: '--pathB'
+        },
+        {
+          title: '--titleC',
+          path: '--pathC'
+        }
+      ]
     }
   };
 
@@ -39,12 +33,12 @@ describe('ContactLanding', () => {
     expect(screen.getByRole('contact-landing')).toBeInTheDocument();
   });
 
-  test('expect the ContactLanding component to be rendered with (3) images and the welcome title', () => {
+  test('expect the ContactLanding component to be rendered with (3) links and the welcome title', () => {
     renderWithRouter(
       <ContactLanding landing={{ ...testContactLandingProps.landing }} />
     );
 
-    expect(screen.getAllByRole('img')).toHaveLength(3);
+    expect(screen.getAllByRole('link')).toHaveLength(3);
 
     expect(screen.getByRole('heading')).toBeInTheDocument();
   });
@@ -55,28 +49,28 @@ describe('ContactLanding', () => {
     );
 
     expect(
-      screen.getByRole('img', {
-        name: testContactLandingProps.landing.images[0].alt
+      screen.getByRole('link', {
+        name: testContactLandingProps.landing.social[0].title
       })
     ).toHaveAttribute(
-      'src',
-      expect.stringContaining(testContactLandingProps.landing.images[0].src)
+      'href',
+      expect.stringContaining(testContactLandingProps.landing.social[0].path)
     );
     expect(
-      screen.getByRole('img', {
-        name: testContactLandingProps.landing.images[1].alt
+      screen.getByRole('link', {
+        name: testContactLandingProps.landing.social[1].title
       })
     ).toHaveAttribute(
-      'src',
-      expect.stringContaining(testContactLandingProps.landing.images[1].src)
+      'href',
+      expect.stringContaining(testContactLandingProps.landing.social[1].path)
     );
     expect(
-      screen.getByRole('img', {
-        name: testContactLandingProps.landing.images[2].alt
+      screen.getByRole('link', {
+        name: testContactLandingProps.landing.social[2].title
       })
     ).toHaveAttribute(
-      'src',
-      expect.stringContaining(testContactLandingProps.landing.images[2].src)
+      'href',
+      expect.stringContaining(testContactLandingProps.landing.social[2].path)
     );
 
     expect(screen.getByRole('heading')).toHaveTextContent(
