@@ -40,12 +40,73 @@ const assets = {
           body: 'hello, observers. although, i am just beginning to understand the world of development, the following timeline showcases what technologies i have learned along with the projects that helped me learn those technologies. i am confident that i have learned a great deal and will continue to learn throughout my life.',
           title: 'timeline\\⤥'
         },
-        images: [
+        markers: [
           {
-            alt: 'about-timeline-0',
-            description: 'about-timeline-0',
-            id: uuidv4(),
-            src: ''
+            technology: '--html, --css',
+            projects: [
+              {
+                project: {
+                  title: '???',
+                  path: '???'
+                }
+              },
+              {
+                project: {
+                  title: '???',
+                  path: '???'
+                }
+              },
+              {
+                project: {
+                  title: '???',
+                  path: '???'
+                }
+              }
+            ]
+          },
+          {
+            technology: '--html, --css, --js',
+            projects: [
+              {
+                project: {
+                  title: '???',
+                  path: '???'
+                }
+              }
+            ]
+          },
+          {
+            technology: '--react',
+            projects: [
+              {
+                project: {
+                  title: '???',
+                  path: '???'
+                }
+              }
+            ]
+          },
+          {
+            technology: '--react, --typescript',
+            projects: [
+              {
+                project: {
+                  title: '???',
+                  path: '???'
+                }
+              }
+            ]
+          },
+          {
+            technology: '--???',
+            projects: [
+              {
+                project: {
+                  title: '???',
+                  path: '???'
+                }
+              }
+            ]
           }
         ]
       }

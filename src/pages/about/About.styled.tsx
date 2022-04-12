@@ -7,6 +7,7 @@ const StyledAbout = styled.section.attrs(() => ({ role: 'about' }))`
   height: 100%;
   justify-content: center;
   margin: auto;
+  margin-right: 8em;
   width: 100%;
 `;
 
@@ -19,7 +20,7 @@ const StyledAboutGrid = styled.div`
   display: grid;
   gap: 2em;
   grid: repeat(2, auto) / 3fr 1fr;
-  grid-template-areas: 'information timeline' 'technology timeline';
+  grid-template-areas: 'information technology' 'timeline timeline';
   justify-content: center;
 `;
 
