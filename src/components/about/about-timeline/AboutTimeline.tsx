@@ -58,6 +58,7 @@ const AboutTimeline: FC<AboutTimelineProps> = (props) => {
                 <StyledAboutTimelineMarkerProject
                   key={uuidv4()}
                   href={item.project.path}
+                  target='_blank'
                 >
                   {item.project.title}
                 </StyledAboutTimelineMarkerProject>

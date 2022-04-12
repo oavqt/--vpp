@@ -8,14 +8,8 @@ describe('AboutTechnology', () => {
         body: '--body',
         title: '--title'
       },
-      images: [
-        {
-          alt: '-0-alt',
-          description: '--0',
-          id: '-0-id',
-          src: '-0-src'
-        }
-      ]
+      technologies: ['--techA', '--techB', '--techC'],
+      tools: ['--toolsA', '--toolsB', '--toolsC']
     }
   };
 
@@ -29,7 +23,7 @@ describe('AboutTechnology', () => {
     expect(screen.getByRole('about-technology')).toBeInTheDocument();
   });
 
-  test('expect the AboutTechnology component to be rendered with a img, h2, and a paragraph', () => {
+  test('expect the AboutTechnology component to be rendered with a h2 and a paragraph', () => {
     render(
       <AboutTechnology
         technology={{ ...testAboutTechnologyProps.technology }}
@@ -37,8 +31,11 @@ describe('AboutTechnology', () => {
     );
 
     expect(screen.getByRole('about-technology')).toBeInTheDocument();
-    expect(screen.getAllByRole('img').length).toBeGreaterThanOrEqual(0);
-    expect(screen.getByRole('heading')).toBeInTheDocument();
+    expect(
+      screen.getByRole('heading', {
+        name: testAboutTechnologyProps.technology.description.title
+      })
+    ).toBeInTheDocument();
     expect(screen.getByRole('about-technology-body')).toBeInTheDocument();
   });
 
@@ -49,21 +46,47 @@ describe('AboutTechnology', () => {
       />
     );
 
-    expect(screen.getByRole('heading')).toHaveTextContent(
-      testAboutTechnologyProps.technology.description.title
-    );
-
     expect(
-      screen.getByRole('img', {
-        name: testAboutTechnologyProps.technology.images[0].alt
+      screen.getByRole('heading', {
+        name: testAboutTechnologyProps.technology.description.title
       })
-    ).toHaveAttribute(
-      'src',
-      expect.stringContaining(testAboutTechnologyProps.technology.images[0].src)
-    );
+    ).toHaveTextContent(testAboutTechnologyProps.technology.description.title);
 
     expect(screen.getByRole('about-technology-body')).toHaveTextContent(
       testAboutTechnologyProps.technology.description.body
     );
+  });
+
+  test('expect the AboutTechnology component to be rendered with technologies and tools', () => {
+    render(
+      <AboutTechnology
+        technology={{ ...testAboutTechnologyProps.technology }}
+      />
+    );
+
+    expect(
+      screen.getByRole('about-technology-technologies')
+    ).toBeInTheDocument();
+    expect(screen.getByRole('about-technology-tools')).toBeInTheDocument();
+    expect(
+      screen.getByRole('heading', { name: 'technologies' })
+    ).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: 'tools' })).toBeInTheDocument();
+  });
+
+  test('expect the AboutTechnology components technologies and tools to be rendered with elements that match the passed in object prop', () => {
+    render(
+      <AboutTechnology
+        technology={{ ...testAboutTechnologyProps.technology }}
+      />
+    );
+
+    testAboutTechnologyProps.technology.technologies.forEach((technology) => {
+      expect(screen.getByText(technology)).toBeInTheDocument();
+    });
+
+    testAboutTechnologyProps.technology.tools.forEach((tool) => {
+      expect(screen.getByText(tool)).toBeInTheDocument();
+    });
   });
 });

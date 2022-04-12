@@ -3,9 +3,15 @@ import { v4 as uuidv4 } from 'uuid';
 import assets from '../../../assets/assets';
 import StyledAboutTechnology, {
   StyledAboutTechnologyArticle,
+  StyledAboutTechnologyContainer,
   StyledAboutTechnologyHeading,
-  StyledAboutTechnologyImageContainer,
-  StyledAboutTechnologyParagraph
+  StyledAboutTechnologyParagraph,
+  StyledAboutTechnologyTechnologies,
+  StyledAboutTechnologyTechnologiesTitle,
+  StyledAboutTechnologyTechnology,
+  StyledAboutTechnologyTool,
+  StyledAboutTechnologyTools,
+  StyledAboutTechnologyToolsTitle
 } from './AboutTechnology.styled';
 
 interface AboutTechnologyProps {
@@ -14,10 +20,8 @@ interface AboutTechnologyProps {
       body: string;
       title: string;
     };
-    images: {
-      alt: string;
-      src: string;
-    }[];
+    technologies: string[];
+    tools: string[];
   };
 }
 
@@ -33,13 +37,30 @@ const AboutTechnology: FC<AboutTechnologyProps> = (props) => {
             {props.technology.description.body}
           </StyledAboutTechnologyParagraph>
         </div>
-        <StyledAboutTechnologyImageContainer>
-          {props.technology.images.map((item) => (
-            <div key={uuidv4()}>
-              <img alt={item.alt} src={item.src} />
-            </div>
-          ))}
-        </StyledAboutTechnologyImageContainer>
+        <StyledAboutTechnologyContainer>
+          <StyledAboutTechnologyTechnologies>
+            <StyledAboutTechnologyTechnologiesTitle>
+              technologies
+            </StyledAboutTechnologyTechnologiesTitle>
+            {props.technology.technologies.map((item) => (
+              <div key={uuidv4()}>
+                <StyledAboutTechnologyTechnology>
+                  {item}
+                </StyledAboutTechnologyTechnology>
+              </div>
+            ))}
+          </StyledAboutTechnologyTechnologies>
+          <StyledAboutTechnologyTools>
+            <StyledAboutTechnologyToolsTitle>
+              tools
+            </StyledAboutTechnologyToolsTitle>
+            {props.technology.tools.map((item) => (
+              <div key={uuidv4()}>
+                <StyledAboutTechnologyTool>{item}</StyledAboutTechnologyTool>
+              </div>
+            ))}
+          </StyledAboutTechnologyTools>
+        </StyledAboutTechnologyContainer>
       </StyledAboutTechnologyArticle>
     </StyledAboutTechnology>
   );

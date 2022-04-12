@@ -4,7 +4,12 @@ import styled from 'styled-components';
 const StyledAboutTechnology = styled.section.attrs(() => ({
   role: 'about-technology'
 }))`
+  background: #313131;
+  border-radius: 0.1em;
+  border-top-right-radius: 25%;
+  color: #fff;
   grid-area: technology;
+  padding: 1em;
 `;
 
 export default StyledAboutTechnology;
@@ -13,15 +18,41 @@ export default StyledAboutTechnology;
 //AboutTechnology elements
 const StyledAboutTechnologyArticle = styled.article``;
 const StyledAboutTechnologyHeading = styled.h2``;
-const StyledAboutTechnologyImageContainer = styled.div``;
+const StyledAboutTechnologyContainer = styled.div`
+  align-items: flex-start;
+  display: flex;
+  justify-content: space-around;
+`;
 const StyledAboutTechnologyParagraph = styled.p.attrs(() => ({
   role: 'about-technology-body'
 }))``;
+const StyledAboutTechnologyTechnologies = styled.div.attrs(() => ({
+  role: 'about-technology-technologies'
+}))``;
+const StyledAboutTechnologyTechnologiesTitle = styled.h3`
+  margin: 0;
+  padding: 0;
+`;
+const StyledAboutTechnologyTechnology = styled.p``;
+const StyledAboutTechnologyTools = styled.div.attrs(() => ({
+  role: 'about-technology-tools'
+}))``;
+const StyledAboutTechnologyToolsTitle = styled.h3`
+  margin: 0;
+  padding: 0;
+`;
+const StyledAboutTechnologyTool = styled.p``;
 
 export {
   StyledAboutTechnologyArticle,
   StyledAboutTechnologyHeading,
-  StyledAboutTechnologyImageContainer,
-  StyledAboutTechnologyParagraph
+  StyledAboutTechnologyContainer,
+  StyledAboutTechnologyParagraph,
+  StyledAboutTechnologyTechnologies,
+  StyledAboutTechnologyTechnologiesTitle,
+  StyledAboutTechnologyTechnology,
+  StyledAboutTechnologyTools,
+  StyledAboutTechnologyToolsTitle,
+  StyledAboutTechnologyTool
 };
 //

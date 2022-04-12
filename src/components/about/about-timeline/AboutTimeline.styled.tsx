@@ -24,9 +24,10 @@ const StyledAboutTimelineMarker = styled.div`
 const StyledAboutTimelineMarkerContainer = styled.div.attrs(() => ({
   role: 'about-timeline-timeline'
 }))`
-  align-items: center;
+  align-items: start;
   display: grid;
-  grid: 1fr 1em 1fr / repeat(5, 1fr);
+  grid: 1fr 1em 8fr / repeat(5, 1fr);
+  justify-items: center;
 `;
 const StyledAboutTimelineMarkerIndent = styled.div`
   animation: --timeline-marker-progress ease-in 0.2s forwards 2s;
@@ -47,9 +48,13 @@ const StyledAboutTimelineMarkerProject = styled.a`
   color: #101010;
   text-decoration: none;
   margin: 0.2em 0;
+
+  :hover {
+    color: #00eeff;
+  }
 `;
 const StyledAboutTimelineMarkerProjectContainer = styled.div`
-  align-items: center;
+  align-items: flex-start;
   display: flex;
   flex-direction: column;
   justify-content: center;

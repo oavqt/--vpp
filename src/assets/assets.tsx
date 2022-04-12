@@ -26,14 +26,8 @@ const assets = {
           body: "hello, observers. i'm constantly learning, testing, and researching new technologies and methods to help me solve the mysteries of development. however, these are some of the technologies i have used to build a solid foundation and understanding of the development world.",
           title: 'technology\\⤥'
         },
-        images: [
-          {
-            alt: 'about-technology-0',
-            description: 'about-technology-0',
-            id: uuidv4(),
-            src: ''
-          }
-        ]
+        technologies: ['html', 'css', 'js', 'react', 'typescript'],
+        tools: ['webpack', 'npm', 'jest']
       },
       timeline: {
         description: {
@@ -42,68 +36,152 @@ const assets = {
         },
         markers: [
           {
-            technology: '--html, --css',
+            technology: 'html / css',
             projects: [
               {
                 project: {
-                  title: '???',
-                  path: '???'
+                  title: '002-tpfcc',
+                  path: 'https://github.com/ortizqtv/002-tpfcc'
                 }
               },
               {
                 project: {
-                  title: '???',
-                  path: '???'
+                  title: '003-surveyfcc',
+                  path: 'https://github.com/ortizqtv/003-surveyfcc'
                 }
               },
               {
                 project: {
-                  title: '???',
-                  path: '???'
+                  title: '004-plpfcc',
+                  path: 'https://github.com/ortizqtv/004-plpfcc'
+                }
+              },
+              {
+                project: {
+                  title: '005-tdpfcc',
+                  path: 'https://github.com/ortizqtv/005-tdpfcc'
+                }
+              },
+              {
+                project: {
+                  title: '006-googlehtop',
+                  path: 'https://github.com/ortizqtv/006-googlehtop'
+                }
+              },
+              {
+                project: {
+                  title: '007-googlesptop',
+                  path: 'https://github.com/ortizqtv/007-googlesptop'
                 }
               }
             ]
           },
           {
-            technology: '--html, --css, --js',
+            technology: 'html / css / js',
             projects: [
               {
                 project: {
-                  title: '???',
-                  path: '???'
+                  title: '008-rpstop',
+                  path: 'https://github.com/ortizqtv/008-rpstop'
+                }
+              },
+              {
+                project: {
+                  title: '009-eastop',
+                  path: 'https://github.com/ortizqtv/009-eastop'
+                }
+              },
+              {
+                project: {
+                  title: '010-calctop',
+                  path: 'https://github.com/ortizqtv/010-calctop'
+                }
+              },
+              {
+                project: {
+                  title: '011-ltop',
+                  path: 'https://github.com/ortizqtv/011-ltop'
+                }
+              },
+              {
+                project: {
+                  title: '012-tttop',
+                  path: 'https://github.com/ortizqtv/012-tttop'
+                }
+              },
+              {
+                project: {
+                  title: '013-rtop',
+                  path: 'https://github.com/ortizqtv/013-rtop'
+                }
+              },
+              {
+                project: {
+                  title: '014-tdtop',
+                  path: 'https://github.com/ortizqtv/014-tdtop'
+                }
+              },
+              {
+                project: {
+                  title: '015-watop',
+                  path: 'https://github.com/ortizqtv/015-watop'
+                }
+              },
+              {
+                project: {
+                  title: '016-bstop',
+                  path: 'https://github.com/ortizqtv/016-bstop'
+                }
+              },
+              {
+                project: {
+                  title: '--vtemplate',
+                  path: 'https://github.com/ortizqtv/--vtemplate'
                 }
               }
             ]
           },
           {
-            technology: '--react',
+            technology: 'react',
             projects: [
               {
                 project: {
-                  title: '???',
-                  path: '???'
+                  title: '...',
+                  path: '...'
                 }
               }
             ]
           },
           {
-            technology: '--react, --typescript',
+            technology: 'react \\ typescript',
             projects: [
               {
                 project: {
-                  title: '???',
-                  path: '???'
+                  title: '017-retop',
+                  path: 'https://github.com/ortizqtv/017-retop'
+                }
+              },
+              {
+                project: {
+                  title: '018-sctop',
+                  path: 'https://github.com/ortizqtv/018-sctop'
+                }
+              },
+              {
+                project: {
+                  title: '--vpp',
+                  path: 'https://github.com/ortizqtv/--vpp'
                 }
               }
             ]
           },
           {
-            technology: '--???',
+            technology: '...',
             projects: [
               {
                 project: {
-                  title: '???',
-                  path: '???'
+                  title: '...',
+                  path: '...'
                 }
               }
             ]
