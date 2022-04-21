@@ -3,6 +3,9 @@ import vdark from './images/vdark.png';
 import vlogo from './images/vlogo.png';
 import vlight from './images/vlight.png';
 import vpurple from './images/vpurple.png';
+import retop from './gifs/retop.gif';
+import rtop from './gifs/rtop.gif';
+import tdtop from './gifs/tdtop.gif';
 
 const assets = {
   pages: {
@@ -36,7 +39,7 @@ const assets = {
         },
         markers: [
           {
-            technology: 'html / css',
+            technology: 'html \\ css',
             projects: [
               {
                 project: {
@@ -77,7 +80,7 @@ const assets = {
             ]
           },
           {
-            technology: 'html / css / js',
+            technology: 'html \\ css \\ js',
             projects: [
               {
                 project: {
@@ -176,7 +179,7 @@ const assets = {
             ]
           },
           {
-            technology: '...',
+            technology: 'react \\ typescript \\ node',
             projects: [
               {
                 project: {
@@ -241,26 +244,21 @@ const assets = {
     },
     projects: {
       description: {
-        title: 'projects\\⤥',
-        body: 'je remercie mon dieu à chaque souvenir de toi, que dieu te bénisse je remercie mon dieu à chaque souvenir de toi, que dieu te bénisse'
+        title: 'hyperbolic time chamber\\⤥',
+        body: "hello, observers, i have used these projects as a means of learning, testing, and researching new technologies and methods of development. \\ 'error messages'"
       },
       display: [
         {
           assets: {
             image: {
-              alt: 'dieu te bénisse',
-              src: 'dieu te bénisse'
+              alt: '017-retop',
+              src: retop
             },
-            technology: [
-              {
-                alt: 'dieu te bénisse',
-                src: 'dieu te bénisse'
-              }
-            ]
+            technologies: 'react \\ typescript'
           },
           description: {
             body: 'je remercie mon dieu à chaque souvenir de toi, que dieu te bénisse je remercie mon dieu à chaque souvenir de toi, que dieu te bénisse',
-            title: 'dieu te bénisse'
+            title: '017-retop'
           },
           internal: {
             active: false,
@@ -269,12 +267,40 @@ const assets = {
           },
           external: {
             code: {
-              message: 'dieu te bénisse',
-              path: 'dieu te bénisse'
+              message: 'github',
+              path: 'https://github.com/ortizqtv/017-retop'
             },
             website: {
-              message: 'dieu te bénisse',
-              path: 'dieu te bénisse'
+              message: 'website',
+              path: 'https://ortizqtv.github.io/017-retop/'
+            }
+          }
+        },
+        {
+          assets: {
+            image: {
+              alt: '013-rtop',
+              src: rtop
+            },
+            technologies: 'html \\ css \\ js'
+          },
+          description: {
+            body: 'je remercie mon dieu à chaque souvenir de toi, que dieu te bénisse je remercie mon dieu à chaque souvenir de toi, que dieu te bénisse',
+            title: '013-rtop'
+          },
+          internal: {
+            active: false,
+            empty: false,
+            inactive: false
+          },
+          external: {
+            code: {
+              message: 'github',
+              path: 'https://github.com/ortizqtv/013-rtop'
+            },
+            website: {
+              message: 'website',
+              path: 'https://ortizqtv.github.io/013-rtop/'
             }
           }
         },
@@ -282,18 +308,13 @@ const assets = {
           assets: {
             image: {
               alt: 'dieu te bénisse',
-              src: 'dieu te bénisse'
+              src: tdtop
             },
-            technology: [
-              {
-                alt: 'dieu te bénisse',
-                src: 'dieu te bénisse'
-              }
-            ]
+            technologies: 'html \\ css \\ js'
           },
           description: {
             body: 'je remercie mon dieu à chaque souvenir de toi, que dieu te bénisse je remercie mon dieu à chaque souvenir de toi, que dieu te bénisse',
-            title: 'dieu te bénisse'
+            title: '014-tdtop'
           },
           internal: {
             active: false,
@@ -302,45 +323,12 @@ const assets = {
           },
           external: {
             code: {
-              message: 'dieu te bénisse',
-              path: 'dieu te bénisse'
+              message: 'github',
+              path: 'https://github.com/ortizqtv/014-tdtop'
             },
             website: {
-              message: 'dieu te bénisse',
-              path: 'dieu te bénisse'
-            }
-          }
-        },
-        {
-          assets: {
-            image: {
-              alt: 'dieu te bénisse',
-              src: 'dieu te bénisse'
-            },
-            technology: [
-              {
-                alt: 'dieu te bénisse',
-                src: 'dieu te bénisse'
-              }
-            ]
-          },
-          description: {
-            body: 'je remercie mon dieu à chaque souvenir de toi, que dieu te bénisse je remercie mon dieu à chaque souvenir de toi, que dieu te bénisse',
-            title: 'dieu te bénisse'
-          },
-          internal: {
-            active: false,
-            empty: false,
-            inactive: false
-          },
-          external: {
-            code: {
-              message: 'dieu te bénisse',
-              path: 'dieu te bénisse'
-            },
-            website: {
-              message: 'dieu te bénisse',
-              path: 'dieu te bénisse'
+              message: 'website',
+              path: 'https://ortizqtv.github.io/014-tdtop/'
             }
           }
         }

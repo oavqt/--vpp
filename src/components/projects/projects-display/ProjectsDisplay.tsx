@@ -8,12 +8,13 @@ import StyledProjectsDisplay, {
   StyledProjectsDisplayImage,
   StyledProjectsDisplayLink,
   StyledProjectsDisplayParagraph,
-  StyledProjectsDisplayTechnologyImageContainer,
   StyledProjectsDisplayLanding,
   StyledProjectsDisplayProject,
   StyledProjectsDisplayLinkContainer,
   StyledProjectsDisplayImageContainer,
-  StyledProjectsDisplayProjectContainer
+  StyledProjectsDisplayProjectContainer,
+  StyledProjectsDisplayTechnologies,
+  StyledProjectsDisplayDescription
 } from './ProjectsDisplay.styled';
 
 interface ProjectDisplayProps {
@@ -42,22 +43,18 @@ const ProjectsDisplay: FC<ProjectDisplayProps> = (props) => {
                   src={props.display.assets.image.src}
                 />
               </div>
-              <StyledProjectsDisplayTechnologyImageContainer>
-                {props.display.assets.technology.map((item) => (
-                  <div key={uuidv4()}>
-                    <img alt={item.alt} src={item.src} />
-                  </div>
-                ))}
-              </StyledProjectsDisplayTechnologyImageContainer>
+              <StyledProjectsDisplayTechnologies>
+                {props.display.assets.technologies}
+              </StyledProjectsDisplayTechnologies>
             </StyledProjectsDisplayImageContainer>
-            <div>
+            <StyledProjectsDisplayDescription>
               <StyledProjectsDisplayHeading>
                 {props.display.description.title}
               </StyledProjectsDisplayHeading>
               <StyledProjectsDisplayParagraph>
                 {props.display.description.body}
               </StyledProjectsDisplayParagraph>
-            </div>
+            </StyledProjectsDisplayDescription>
           </StyledProjectsDisplayProjectContainer>
           <StyledProjectsDisplayLinkContainer>
             <StyledProjectsDisplayLink

@@ -20,7 +20,7 @@ const StyledContactLandingLink = styled.a`
   text-decoration: none;
 
   :hover {
-    color: #00eeff;
+    color: #cc00ff;
   }
 `;
 const StyledContactLandingLinkContainer = styled.div`

@@ -12,12 +12,7 @@ describe('ProjectsNav', () => {
             alt: '',
             src: ''
           },
-          technology: [
-            {
-              alt: '',
-              src: ''
-            }
-          ]
+          technologies: ''
         },
         description: {
           body: '',

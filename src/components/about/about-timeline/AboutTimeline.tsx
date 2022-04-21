@@ -49,7 +49,7 @@ const AboutTimeline: FC<AboutTimelineProps> = (props) => {
               <StyledAboutTimelineMarkerTechnology>
                 {item.technology}
               </StyledAboutTimelineMarkerTechnology>
-              <StyledAboutTimelineMarkerIndent />
+              {/* <StyledAboutTimelineMarkerIndent /> */}
             </StyledAboutTimelineMarker>
           ))}
           {props.timeline.markers.map((item) => (

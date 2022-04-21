@@ -9,12 +9,7 @@ describe('ProjectsDisplay', () => {
         alt: '--alt',
         src: '--src'
       },
-      technology: [
-        {
-          alt: '--technology-alt',
-          src: '--technology-src'
-        }
-      ]
+      technologies: '--technologies'
     },
     description: {
       body: '--title',
@@ -45,7 +40,7 @@ describe('ProjectsDisplay', () => {
     expect(screen.getByRole('projects-display')).toBeInTheDocument();
   });
 
-  test('expect the ProjectsDisplay component to be rendered with a header, paragraph, (2) image, and (2) link elements', () => {
+  test('expect the ProjectsDisplay component to be rendered with a header, paragraph, image, and (2) link elements', () => {
     renderWithRouter(
       <ProjectsDisplay display={{ ...testProjectsDisplayProps }} />
     );
@@ -54,7 +49,10 @@ describe('ProjectsDisplay', () => {
     expect(
       screen.getByRole('projects-display-description-body')
     ).toBeInTheDocument();
-    expect(screen.getAllByRole('img')).toHaveLength(2);
+    expect(screen.getByRole('img')).toBeInTheDocument();
+    expect(
+      screen.getByRole('projects-display-technologies')
+    ).toBeInTheDocument();
     expect(screen.getAllByRole('link')).toHaveLength(2);
   });
 
@@ -77,9 +75,10 @@ describe('ProjectsDisplay', () => {
       'src',
       expect.stringContaining('--src')
     );
-    expect(
-      screen.getByRole('img', { name: '--technology-alt' })
-    ).toHaveAttribute('src', expect.stringContaining('--technology-src'));
+
+    expect(screen.getByRole('projects-display-technologies')).toHaveTextContent(
+      testProjectsDisplayProps.assets.technologies
+    );
 
     expect(
       screen.getByRole('link', {

@@ -26,21 +26,21 @@ const StyledAboutTimelineMarkerContainer = styled.div.attrs(() => ({
 }))`
   align-items: start;
   display: grid;
-  grid: 1fr 1em 8fr / repeat(5, 1fr);
+  grid: 1fr 1em 100% / repeat(5, 1fr);
   justify-items: center;
 `;
 const StyledAboutTimelineMarkerIndent = styled.div`
   animation: --timeline-marker-progress ease-in 0.2s forwards 2s;
-  background: #cc00ff;
+  background: #ffb7c3;
   border-radius: 0.1em;
-  width: 3em;
+  width: 0.5em;
 
   @keyframes --timeline-marker-progress {
     from {
       height: 0;
     }
     to {
-      height: 0.3em;
+      height: 0.5em;
     }
   }
 `;
@@ -50,7 +50,7 @@ const StyledAboutTimelineMarkerProject = styled.a`
   margin: 0.2em 0;
 
   :hover {
-    color: #00eeff;
+    color: #cc00ff;
   }
 `;
 const StyledAboutTimelineMarkerProjectContainer = styled.div`
@@ -70,7 +70,7 @@ const StyledAboutTimelineParagraph = styled.p.attrs(() => ({
 const StyledAboutTimelineTemplate = styled.div.attrs(() => ({
   role: 'about-timeline-timeline-template'
 }))`
-  background: #10101069;
+  background: #313131;
   border-radius: 0.1em;
   grid-area: 2 / 1 / 3 / -1;
   height: 1em;
@@ -87,8 +87,7 @@ const StyledAboutTimelineTemplate = styled.div.attrs(() => ({
 
   ::after {
     animation: --timeline-progress 2s ease-in forwards;
-    background: #cc00ff;
-    border-radius: 0.1em;
+    background: #ffb7c3;
     content: '';
     display: inline-block;
     height: 1em;

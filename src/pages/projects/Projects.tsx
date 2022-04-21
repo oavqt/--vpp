@@ -11,10 +11,7 @@ interface ProjectObject {
       alt: string;
       src: string;
     };
-    technology: {
-      alt: string;
-      src: string;
-    }[];
+    technologies: string;
   };
   description: {
     body: string;
@@ -71,12 +68,7 @@ const initialProjectState = () => {
             alt: '',
             src: ''
           },
-          technology: [
-            {
-              alt: '',
-              src: ''
-            }
-          ]
+          technologies: ''
         },
         description: {
           body: '',

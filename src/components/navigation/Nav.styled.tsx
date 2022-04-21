@@ -20,7 +20,7 @@ const StyledNavLink = styled(NavLink)`
   text-decoration: none;
 
   :hover {
-    color: #00eeff;
+    color: #cc00ff;
   }
 
   &.active {

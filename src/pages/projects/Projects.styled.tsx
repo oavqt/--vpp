@@ -7,6 +7,7 @@ const StyledProjects = styled.section.attrs(() => ({ role: 'projects' }))`
   flex-direction: column;
   height: 100%;
   justify-content: center;
+  margin-right: 2em;
   width: 100%;
 `;
 
