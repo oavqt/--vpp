@@ -57,11 +57,13 @@ export { type ProjectAction };
 //
 
 const initialProjectState = () => {
-  const queryProjectComplete = assets.pages.projects.display;
+  const queryProjectCompleteCopyDeep = JSON.parse(
+    JSON.stringify(assets.pages.projects.display)
+  );
 
   return {
     project: {
-      complete: queryProjectComplete,
+      complete: queryProjectCompleteCopyDeep,
       current: {
         assets: {
           image: {
@@ -148,8 +150,6 @@ const Projects: FC = () => {
 
   useEffect(() => {
     dispatch({ type: 'init' });
-
-    //return dispatch({type: 'clear'})
   }, []);
 
   return (

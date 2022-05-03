@@ -5,6 +5,7 @@ import vlight from './images/vlight.png';
 import vpurple from './images/vpurple.png';
 import retop from './gifs/retop.gif';
 import rtop from './gifs/rtop.gif';
+import sctop from './gifs/sctop.gif';
 import tdtop from './gifs/tdtop.gif';
 
 const assets = {
@@ -39,7 +40,7 @@ const assets = {
         },
         markers: [
           {
-            technology: 'html \\ css',
+            technology: 'css\\html',
             projects: [
               {
                 project: {
@@ -80,7 +81,7 @@ const assets = {
             ]
           },
           {
-            technology: 'html \\ css \\ js',
+            technology: 'css\\js\\html',
             projects: [
               {
                 project: {
@@ -150,24 +151,18 @@ const assets = {
               {
                 project: {
                   title: '...',
-                  path: '...'
+                  path: 'https://github.com/ortizqtv'
                 }
               }
             ]
           },
           {
-            technology: 'react \\ typescript',
+            technology: 'react\\typescript',
             projects: [
               {
                 project: {
                   title: '017-retop',
                   path: 'https://github.com/ortizqtv/017-retop'
-                }
-              },
-              {
-                project: {
-                  title: '018-sctop',
-                  path: 'https://github.com/ortizqtv/018-sctop'
                 }
               },
               {
@@ -179,12 +174,12 @@ const assets = {
             ]
           },
           {
-            technology: 'react \\ typescript \\ node',
+            technology: 'node\\react\\typescript',
             projects: [
               {
                 project: {
-                  title: '...',
-                  path: '...'
+                  title: '018-sctop',
+                  path: 'https://github.com/ortizqtv/018-sctop'
                 }
               }
             ]
@@ -245,19 +240,47 @@ const assets = {
     projects: {
       description: {
         title: 'hyperbolic time chamber\\⤥',
-        body: "hello, observers, i have used these projects as a means of learning, testing, and researching new technologies and methods of development. \\ 'error messages'"
+        body: "hello, observers. i have used these projects as a means of learning, testing, and researching new technologies and methods of development. \\ 'error messages'"
       },
       display: [
+        {
+          assets: {
+            image: {
+              alt: '018-sctop',
+              src: sctop
+            },
+            technologies: 'node\\react\\typescript'
+          },
+          description: {
+            body: 'hello, observers. 018-sctop is a project focused on using react, typescript, and node to build a fully functional ecommerce website.',
+            title: '018-sctop'
+          },
+          internal: {
+            active: false,
+            empty: false,
+            inactive: false
+          },
+          external: {
+            code: {
+              message: 'github',
+              path: 'https://github.com/ortizqtv/018-sctop'
+            },
+            website: {
+              message: '',
+              path: 'https://github.com/ortizqtv/018-sctop'
+            }
+          }
+        },
         {
           assets: {
             image: {
               alt: '017-retop',
               src: retop
             },
-            technologies: 'react \\ typescript'
+            technologies: 'react\\typescript'
           },
           description: {
-            body: 'je remercie mon dieu à chaque souvenir de toi, que dieu te bénisse je remercie mon dieu à chaque souvenir de toi, que dieu te bénisse',
+            body: 'hello, observers. 017-retop is a project that is focused on building resumes using react and typescript.',
             title: '017-retop'
           },
           internal: {
@@ -279,41 +302,13 @@ const assets = {
         {
           assets: {
             image: {
-              alt: '013-rtop',
-              src: rtop
-            },
-            technologies: 'html \\ css \\ js'
-          },
-          description: {
-            body: 'je remercie mon dieu à chaque souvenir de toi, que dieu te bénisse je remercie mon dieu à chaque souvenir de toi, que dieu te bénisse',
-            title: '013-rtop'
-          },
-          internal: {
-            active: false,
-            empty: false,
-            inactive: false
-          },
-          external: {
-            code: {
-              message: 'github',
-              path: 'https://github.com/ortizqtv/013-rtop'
-            },
-            website: {
-              message: 'website',
-              path: 'https://ortizqtv.github.io/013-rtop/'
-            }
-          }
-        },
-        {
-          assets: {
-            image: {
-              alt: 'dieu te bénisse',
+              alt: '014-tdtop',
               src: tdtop
             },
-            technologies: 'html \\ css \\ js'
+            technologies: 'css\\js\\html'
           },
           description: {
-            body: 'je remercie mon dieu à chaque souvenir de toi, que dieu te bénisse je remercie mon dieu à chaque souvenir de toi, que dieu te bénisse',
+            body: 'hello, observers. 014-tdtop is a project that uses react and typescript to build a todo application.',
             title: '014-tdtop'
           },
           internal: {
@@ -329,6 +324,34 @@ const assets = {
             website: {
               message: 'website',
               path: 'https://ortizqtv.github.io/014-tdtop/'
+            }
+          }
+        },
+        {
+          assets: {
+            image: {
+              alt: '013-rtop',
+              src: rtop
+            },
+            technologies: 'css\\js\\html'
+          },
+          description: {
+            body: 'hello, observers. 013-retop is a project that is focused on using css, javascript, and html to build a template for a ecommerce website.',
+            title: '013-rtop'
+          },
+          internal: {
+            active: false,
+            empty: false,
+            inactive: false
+          },
+          external: {
+            code: {
+              message: 'github',
+              path: 'https://github.com/ortizqtv/013-rtop'
+            },
+            website: {
+              message: 'website',
+              path: 'https://ortizqtv.github.io/013-rtop/'
             }
           }
         }
