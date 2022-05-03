@@ -3,6 +3,15 @@ import { createGlobalStyle } from 'styled-components';
 const styled = { createGlobalStyle };
 
 const StyledMain = styled.createGlobalStyle`
+  @keyframes --fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
   @keyframes --nav-inactive {
     0% {
       box-shadow: 0 1rem 1rem 0 #ffb7c3;

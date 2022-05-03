@@ -3,6 +3,7 @@ import styled from 'styled-components';
 //About
 const StyledAbout = styled.section.attrs(() => ({ role: 'about' }))`
   align-items: center;
+  animation: --fade-in 0.2s ease-in-out;
   display: flex;
   height: 100%;
   justify-content: center;

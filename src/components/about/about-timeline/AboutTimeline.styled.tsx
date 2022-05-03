@@ -86,7 +86,7 @@ const StyledAboutTimelineTemplate = styled.div.attrs(() => ({
   }
 
   ::after {
-    animation: --timeline-progress 2s ease-in forwards;
+    animation: --timeline-progress 0.6s ease-in forwards;
     background: #ffb7c3;
     content: '';
     display: inline-block;

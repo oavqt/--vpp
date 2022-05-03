@@ -34,7 +34,7 @@ const ProjectsDisplay: FC<ProjectDisplayProps> = (props) => {
           </StyledProjectsDisplayLandingParagraph>
         </StyledProjectsDisplayLanding>
       ) : (
-        <StyledProjectsDisplayProject>
+        <StyledProjectsDisplayProject key={uuidv4()}>
           <StyledProjectsDisplayProjectContainer>
             <StyledProjectsDisplayImageContainer>
               <div>

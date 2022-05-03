@@ -26,6 +26,7 @@ const StyledProjectsDisplayLandingParagraph = styled.p.attrs(() => ({
 const StyledProjectsDisplayProject = styled.div.attrs(() => ({
   role: 'projects-display-project'
 }))`
+  animation: --fade-in 0.2s ease-in-out;
   display: flex;
   flex-direction: column;
   justify-content: center;
