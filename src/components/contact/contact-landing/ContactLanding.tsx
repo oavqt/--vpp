@@ -1,8 +1,10 @@
 import { FC } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import StyledContactLanding, {
+  StyledContactLandingGraphic,
   StyledContactLandingLink,
-  StyledContactLandingLinkContainer
+  StyledContactLandingLinkContainer,
+  StyledContactLandingMessage
 } from './ContactLanding.styled';
 
 interface ContactLandingProps {
@@ -21,8 +23,11 @@ const ContactLanding: FC<ContactLandingProps> = (props) => {
   return (
     <StyledContactLanding>
       <div>
-        <h2>{props.landing.message.primary}</h2>
+        <StyledContactLandingMessage>
+          {props.landing.message.primary}
+        </StyledContactLandingMessage>
       </div>
+      <StyledContactLandingGraphic />
       <StyledContactLandingLinkContainer>
         {props.landing.social.map((item) => (
           <div key={uuidv4()}>

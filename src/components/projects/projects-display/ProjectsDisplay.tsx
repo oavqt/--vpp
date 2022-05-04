@@ -14,7 +14,8 @@ import StyledProjectsDisplay, {
   StyledProjectsDisplayImageContainer,
   StyledProjectsDisplayProjectContainer,
   StyledProjectsDisplayTechnologies,
-  StyledProjectsDisplayDescription
+  StyledProjectsDisplayDescription,
+  StyledProjectsDisplayDescriptionGraphic
 } from './ProjectsDisplay.styled';
 
 interface ProjectDisplayProps {
@@ -51,6 +52,7 @@ const ProjectsDisplay: FC<ProjectDisplayProps> = (props) => {
               <StyledProjectsDisplayHeading>
                 {props.display.description.title}
               </StyledProjectsDisplayHeading>
+              <StyledProjectsDisplayDescriptionGraphic />
               <StyledProjectsDisplayParagraph>
                 {props.display.description.body}
               </StyledProjectsDisplayParagraph>

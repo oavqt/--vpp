@@ -30,8 +30,8 @@ const assets = {
           body: "hello, observers. i'm constantly learning, testing, and researching new technologies and methods to help me solve the mysteries of development. however, these are some of the technologies i have used to build a solid foundation and understanding of the development world.",
           title: 'technology\\⤥'
         },
-        technologies: ['html', 'css', 'js', 'react', 'typescript'],
-        tools: ['webpack', 'npm', 'jest']
+        technologies: ['css', 'html', 'js', 'react', 'typescript'],
+        tools: ['jest', 'npm', 'webpack']
       },
       timeline: {
         description: {
@@ -81,7 +81,7 @@ const assets = {
             ]
           },
           {
-            technology: 'css\\js\\html',
+            technology: 'css\\html\\js',
             projects: [
               {
                 project: {
@@ -262,7 +262,7 @@ const assets = {
           },
           external: {
             code: {
-              message: 'github',
+              message: 'code',
               path: 'https://github.com/ortizqtv/018-sctop'
             },
             website: {
@@ -290,11 +290,11 @@ const assets = {
           },
           external: {
             code: {
-              message: 'github',
+              message: 'code',
               path: 'https://github.com/ortizqtv/017-retop'
             },
             website: {
-              message: 'website',
+              message: 'demo',
               path: 'https://ortizqtv.github.io/017-retop/'
             }
           }
@@ -305,7 +305,7 @@ const assets = {
               alt: '014-tdtop',
               src: tdtop
             },
-            technologies: 'css\\js\\html'
+            technologies: 'css\\html\\js'
           },
           description: {
             body: 'hello, observers. 014-tdtop is a project that uses react and typescript to build a todo application.',
@@ -318,11 +318,11 @@ const assets = {
           },
           external: {
             code: {
-              message: 'github',
+              message: 'code',
               path: 'https://github.com/ortizqtv/014-tdtop'
             },
             website: {
-              message: 'website',
+              message: 'demo',
               path: 'https://ortizqtv.github.io/014-tdtop/'
             }
           }
@@ -333,7 +333,7 @@ const assets = {
               alt: '013-rtop',
               src: rtop
             },
-            technologies: 'css\\js\\html'
+            technologies: 'css\\html\\js'
           },
           description: {
             body: 'hello, observers. 013-retop is a project that is focused on using css, javascript, and html to build a template for a ecommerce website.',
@@ -346,11 +346,11 @@ const assets = {
           },
           external: {
             code: {
-              message: 'github',
+              message: 'code',
               path: 'https://github.com/ortizqtv/013-rtop'
             },
             website: {
-              message: 'website',
+              message: 'demo',
               path: 'https://ortizqtv.github.io/013-rtop/'
             }
           }

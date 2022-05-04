@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import StyledHomeLanding, {
+  StyledHomeLandingGraphic,
   StyledHomeLandingImage,
   StyledHomeLandingImageContainer
 } from './HomeLanding.styled';
@@ -27,6 +28,7 @@ const HomeLanding: FC<HomeLandingProps> = (props) => {
           </div>
         ))}
       </StyledHomeLandingImageContainer>
+      <StyledHomeLandingGraphic />
       <div>
         <h2>{props.landing.message.primary}</h2>
       </div>

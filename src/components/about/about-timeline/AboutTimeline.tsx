@@ -3,14 +3,13 @@ import { v4 as uuidv4 } from 'uuid';
 import StyledAboutTimeline, {
   StyledAboutTimelineArticle,
   StyledAboutTimelineHeading,
-  StyledAboutTimelineMarker,
-  StyledAboutTimelineMarkerContainer,
-  StyledAboutTimelineMarkerIndent,
-  StyledAboutTimelineMarkerProject,
-  StyledAboutTimelineMarkerProjectContainer,
   StyledAboutTimelineMarkerTechnology,
   StyledAboutTimelineParagraph,
-  StyledAboutTimelineTemplate
+  StyledAboutTimelineMarker,
+  StyledAboutTimelineMarkerProject,
+  StyledAboutTimelineMarkerGraphic,
+  StyledAboutTimelineMarkerProjectContainer,
+  StyledAboutTimelineMarkerContainer
 } from './AboutTimeline.styled';
 
 interface AboutTimelineProps {
@@ -49,23 +48,20 @@ const AboutTimeline: FC<AboutTimelineProps> = (props) => {
               <StyledAboutTimelineMarkerTechnology>
                 {item.technology}
               </StyledAboutTimelineMarkerTechnology>
-              {/* <StyledAboutTimelineMarkerIndent /> */}
+              <StyledAboutTimelineMarkerGraphic />
+              <StyledAboutTimelineMarkerProjectContainer>
+                {item.projects.map((item) => (
+                  <StyledAboutTimelineMarkerProject
+                    key={uuidv4()}
+                    href={item.project.path}
+                    target='_blank'
+                  >
+                    {item.project.title}
+                  </StyledAboutTimelineMarkerProject>
+                ))}
+              </StyledAboutTimelineMarkerProjectContainer>
             </StyledAboutTimelineMarker>
           ))}
-          {props.timeline.markers.map((item) => (
-            <StyledAboutTimelineMarkerProjectContainer key={uuidv4()}>
-              {item.projects.map((item) => (
-                <StyledAboutTimelineMarkerProject
-                  key={uuidv4()}
-                  href={item.project.path}
-                  target='_blank'
-                >
-                  {item.project.title}
-                </StyledAboutTimelineMarkerProject>
-              ))}
-            </StyledAboutTimelineMarkerProjectContainer>
-          ))}
-          <StyledAboutTimelineTemplate />
         </StyledAboutTimelineMarkerContainer>
       </StyledAboutTimelineArticle>
     </StyledAboutTimeline>

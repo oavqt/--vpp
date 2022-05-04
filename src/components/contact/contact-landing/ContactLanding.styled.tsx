@@ -6,6 +6,7 @@ const StyledContactLanding = styled.section.attrs(() => ({
 }))`
   align-items: center;
   display: flex;
+  gap: 0.5em;
   justify-content: center;
   flex-direction: column;
 `;
@@ -14,6 +15,12 @@ export default StyledContactLanding;
 //
 
 //ContactLanding Elements
+const StyledContactLandingGraphic = styled.span`
+  background: #ffb7c3;
+  display: block;
+  height: 0.2em;
+  width: 100%;
+`;
 const StyledContactLandingLink = styled.a`
   color: #313131;
   margin: 0 0.2em;
@@ -26,6 +33,15 @@ const StyledContactLandingLink = styled.a`
 const StyledContactLandingLinkContainer = styled.div`
   display: flex;
 `;
+const StyledContactLandingMessage = styled.h2`
+  margin: 0;
+  padding: 0;
+`;
 
-export { StyledContactLandingLink, StyledContactLandingLinkContainer };
+export {
+  StyledContactLandingGraphic,
+  StyledContactLandingLink,
+  StyledContactLandingLinkContainer,
+  StyledContactLandingMessage
+};
 //

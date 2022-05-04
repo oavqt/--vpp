@@ -41,6 +41,12 @@ const StyledProjectsDisplayProjectContainer = styled.div`
 const StyledProjectsDisplayDescription = styled.div`
   width: 25%;
 `;
+const StyledProjectsDisplayDescriptionGraphic = styled.span`
+  background: #ffb7c3;
+  display: block;
+  height: 0.2em;
+  width: 100%;
+`;
 const StyledProjectsDisplayHeading = styled.h2``;
 const StyledProjectsDisplayImage = styled.img`
   max-width: 100em;
@@ -81,6 +87,7 @@ export {
   StyledProjectsDisplayProject,
   StyledProjectsDisplayProjectContainer,
   StyledProjectsDisplayDescription,
+  StyledProjectsDisplayDescriptionGraphic,
   StyledProjectsDisplayHeading,
   StyledProjectsDisplayImage,
   StyledProjectsDisplayImageContainer,
