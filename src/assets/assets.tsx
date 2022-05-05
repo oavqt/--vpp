@@ -14,7 +14,7 @@ const assets = {
       information: {
         description: {
           body: "hello, observers. my name is victor ortiz. after doing odd jobs all my life, i decided last year to invest in my future by learning how to solve, develop, and implement solutions to the deep mysteries of development. on my journey to understanding development, i've learned many technologies and methods that have enabled me to do things like generate error messages, create infinite loops, and my biggest achievement to date, centering divs...yes, yes, yes...i know it's quite impressive. although centering a div may seem like a very impressive accomplishment, i'm just beginning my journey of understanding the world of development. i'm constantly learning, testing, and researching new technologies and methods to help me solve the mysteries of development.  nevertheless, i should get back to researching new ways of breaking things. if you have any questions, please let me know. i'm always happy to help anyone and everyone.",
-          title: 'log\\⤥'
+          title: 'log \\⤥'
         },
         images: [
           {
@@ -28,7 +28,7 @@ const assets = {
       technology: {
         description: {
           body: "hello, observers. i'm constantly learning, testing, and researching new technologies and methods to help me solve the mysteries of development. however, these are some of the technologies i have used to build a solid foundation and understanding of the development world.",
-          title: 'technology\\⤥'
+          title: 'technology \\⤥'
         },
         technologies: ['css', 'html', 'js', 'react', 'typescript'],
         tools: ['jest', 'npm', 'webpack']
@@ -36,7 +36,7 @@ const assets = {
       timeline: {
         description: {
           body: 'hello, observers. although, i am just beginning to understand the world of development, the following timeline showcases what technologies i have learned along with the projects that helped me learn those technologies. i am confident that i have learned a great deal and will continue to learn throughout my life.',
-          title: 'timeline\\⤥'
+          title: 'timeline \\⤥'
         },
         markers: [
           {
@@ -190,7 +190,7 @@ const assets = {
     contact: {
       landing: {
         message: {
-          primary: 'ortizqtv@gmail.com\\⤥',
+          primary: 'ortizqtv@gmail.com \\⤥',
           secondary: 'dieu te bénisse'
         },
         social: [
@@ -233,13 +233,13 @@ const assets = {
           }
         ],
         message: {
-          primary: 'welcome\\⤥'
+          primary: 'welcome \\⤥'
         }
       }
     },
     projects: {
       description: {
-        title: 'hyperbolic time chamber\\⤥',
+        title: 'hyperbolic time chamber \\⤥',
         body: "hello, observers. i have used these projects as a means of learning, testing, and researching new technologies and methods of development. \\ 'error messages'"
       },
       display: [
@@ -253,7 +253,7 @@ const assets = {
           },
           description: {
             body: 'hello, observers. 018-sctop is a project focused on using react, typescript, and node to build a fully functional ecommerce website.',
-            title: '018-sctop'
+            title: '018-sctop \\⤥'
           },
           internal: {
             active: false,
@@ -281,7 +281,7 @@ const assets = {
           },
           description: {
             body: 'hello, observers. 017-retop is a project that is focused on building resumes using react and typescript.',
-            title: '017-retop'
+            title: '017-retop \\⤥'
           },
           internal: {
             active: false,
@@ -309,7 +309,7 @@ const assets = {
           },
           description: {
             body: 'hello, observers. 014-tdtop is a project that uses react and typescript to build a todo application.',
-            title: '014-tdtop'
+            title: '014-tdtop \\⤥'
           },
           internal: {
             active: false,
@@ -337,7 +337,7 @@ const assets = {
           },
           description: {
             body: 'hello, observers. 013-retop is a project that is focused on using css, javascript, and html to build a template for a ecommerce website.',
-            title: '013-rtop'
+            title: '013-rtop \\⤥'
           },
           internal: {
             active: false,

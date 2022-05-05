@@ -30,6 +30,10 @@ const StyledAboutTimelineMarkerContainer = styled.div.attrs(() => ({
   gap: 2em;
   justify-content: flex-start;
   width: 100%;
+
+  @media screen and (max-width: 969px) {
+    flex-direction: column;
+  }
 `;
 const StyledAboutTimelineMarkerGraphic = styled.span`
   background: #ffb7c3;

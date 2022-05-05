@@ -9,6 +9,10 @@ const StyledNav = styled.nav`
   height: 100%;
   justify-content: center;
   margin: 0 2em;
+
+  @media screen and (max-width: 969px) {
+    margin: 0 1em;
+  }
 `;
 
 export default StyledNav;
@@ -31,7 +35,7 @@ const StyledNavLink = styled(NavLink)`
 const StyledNavList = styled.ul`
   display: flex;
   flex-direction: column;
-  height: 12vh;
+  height: 8em;
   justify-content: space-evenly;
   list-style: none;
   padding: 0;

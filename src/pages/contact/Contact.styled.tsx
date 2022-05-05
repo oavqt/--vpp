@@ -9,6 +9,10 @@ const StyledContact = styled.section.attrs(() => ({
   height: 100%;
   justify-content: center;
   width: 100%;
+
+  @media screen and (max-width: 969px) {
+    margin-right: 1em;
+  }
 `;
 
 export default StyledContact;

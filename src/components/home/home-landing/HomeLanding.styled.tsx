@@ -26,6 +26,26 @@ const StyledHomeLandingImage = styled.img`
 `;
 const StyledHomeLandingImageContainer = styled.div`
   display: flex;
+
+  @media screen and (max-width: 969px) {
+    flex-direction: column;
+  }
+
+  @media screen and (max-width: 969px) and (max-height: 469px) {
+    flex-direction: row;
+  }
+
+  @media screen and (max-width: 969px) and (max-height: 969px) {
+    div:nth-child(1) {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 769px) and (min-height: 269px) and (max-height: 769px) {
+    div:nth-child(n + 1):nth-child(-n + 3) {
+      display: none;
+    }
+  }
 `;
 
 export {

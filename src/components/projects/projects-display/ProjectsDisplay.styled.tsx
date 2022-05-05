@@ -36,10 +36,22 @@ const StyledProjectsDisplayProjectContainer = styled.div`
   align-items: center;
   display: flex;
   justify-content: space-between;
+
+  @media screen and (max-width: 969px) {
+    flex-direction: column;
+  }
+
+  @media screen and (max-width: 969px) and (max-height: 469px) {
+    flex-direction: row;
+  }
 `;
 
 const StyledProjectsDisplayDescription = styled.div`
   width: 25%;
+
+  @media screen and (max-width: 969px) {
+    width: 100%;
+  }
 `;
 const StyledProjectsDisplayDescriptionGraphic = styled.span`
   background: #ffb7c3;

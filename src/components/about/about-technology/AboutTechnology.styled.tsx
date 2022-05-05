@@ -4,12 +4,7 @@ import styled from 'styled-components';
 const StyledAboutTechnology = styled.section.attrs(() => ({
   role: 'about-technology'
 }))`
-  background: #313131;
-  border-radius: 0.1em;
-  border-top-right-radius: 25%;
-  color: #fff;
   grid-area: technology;
-  padding: 1em;
 `;
 
 export default StyledAboutTechnology;

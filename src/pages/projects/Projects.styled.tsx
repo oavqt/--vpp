@@ -10,6 +10,10 @@ const StyledProjects = styled.section.attrs(() => ({ role: 'projects' }))`
   justify-content: center;
   margin-right: 2em;
   width: 100%;
+
+  @media screen and (max-width: 969px) {
+    margin-right: 1em;
+  }
 `;
 
 export default StyledProjects;
